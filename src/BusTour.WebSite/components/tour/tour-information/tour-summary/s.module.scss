@@ -1,0 +1,47 @@
+@import "/styles/mixins";
+
+.summary {
+	display: flex;
+	flex-direction: column;
+	row-gap: 15px;
+
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__messages {
+		@include font(main);
+
+		&-error {
+			color: $error-color
+		}
+
+		&-success {
+			color: $success-color
+		}		
+	}
+}
+.block-cell-template {
+	border-radius: 4px;
+	padding: 0 10px;
+	&--red {
+		background-color: #F00C0C4D;
+	}
+
+	&--green {
+		background-color: #C1E5B8;
+	}
+
+	&--yellow {
+		background-color: #e6b30b96;
+	}
+
+	&--white {
+		background-color: #F5F5F5;
+	}
+
+	&--gray {
+		background-color: #55555538;
+	}
+}

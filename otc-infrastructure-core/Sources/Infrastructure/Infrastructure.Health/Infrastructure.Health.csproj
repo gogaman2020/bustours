@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Configurations>Debug;Release</Configurations>
+    <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="3.1.1" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
+    <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" Version="3.1.4" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="3.2.0" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="3.1.2" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="3.1.13" Condition="'$(TargetFramework)' == 'netcoreapp3.1'" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="5.0.2" Condition="'$(TargetFramework)' == 'net5.0'" />
+    <PackageReference Include="AspNetCore.HealthChecks.Rabbitmq" Version="5.0.1" Condition="'$(TargetFramework)' == 'net5.0'" />
+    <PackageReference Include="AspNetCore.HealthChecks.SqlServer" Version="5.0.2" Condition="'$(TargetFramework)' == 'net5.0'" />
+    <PackageReference Include="AspNetCore.HealthChecks.UI.Client" Version="5.0.1" Condition="'$(TargetFramework)' == 'net5.0'" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" Version="5.0.4" Condition="'$(TargetFramework)' == 'net5.0'" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\otc-clients-core\Sources\Clients\ClientsCommon\ClientsCommon.csproj" />
+    <ProjectReference Include="..\Infrastructure.Common\Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\Infrastructure.Web\Infrastructure.Web.csproj" />
+  </ItemGroup>
+
+</Project>

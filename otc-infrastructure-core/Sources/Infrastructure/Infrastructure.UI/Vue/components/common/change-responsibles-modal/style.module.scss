@@ -1,0 +1,99 @@
+.form {
+    margin-top: 24px;
+
+    label {
+        margin-top: 0;
+    }
+
+    & > label {
+        margin-top: 8px;
+    }
+
+    &__checkbox {
+        display: flex;
+
+        span {
+            flex-basis: 30%;
+        }
+    }
+
+    &__actions {
+        display: flex;
+        margin-top: 28px;
+
+        & > button,
+        & > a {
+            margin-right: 16px;
+        }
+
+        & > button:last-child,
+        & > a:last-child {
+            margin-right: 0;
+        }
+    }  
+}
+
+// ul > li:not(:last-child) {
+//     margin-bottom: 1em;
+// }
+
+.formControl {
+    overflow-y: scroll;
+    height: 86px;
+    min-height: 34px;
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 2px !important;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.mb4{
+    margin-bottom: 1em!important;
+}
+
+.customFile {
+    display: inline-block;
+    margin-bottom: 0;
+    position: relative;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+}
+
+.customFileInput {
+    position: relative;
+    height: calc(1.5em + .75rem + 2px);
+}
+
+.customFileLabel {
+    left: 0;
+    z-index: 1;
+    height: calc(1.5em + .75rem + 2px);
+    font-weight: 400;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #495057;
+}
+
+.inputGroup {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    width: 100%;
+}
+
+.noGroups{
+    margin-bottom: 10px;
+    margin-top: 20px;
+}

@@ -1,0 +1,50 @@
+{
+  "name": "bustour",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev-cross-env": "env-cmd -f .env nuxt-ts --hostname=0.0.0.0 --port=3002",
+    "dev": "env-cmd -f .env nuxt-ts",
+    "docker": "env-cmd -f .env.docker nuxt-ts",
+    "build": "env-cmd -f .env nuxt-ts build",
+    "build-stable": "env-cmd -f .env.stable nuxt-ts build",
+    "build-prod": "env-cmd -f .env.prod nuxt-ts build",
+    "start": "nuxt-ts start",
+    "generate": "env-cmd -f .env nuxt-ts generate",
+    "generate-stable": "env-cmd -f .env.stable nuxt-ts generate",
+    "generate-prod": "env-cmd -f .env.prod nuxt-ts generate"
+  },
+  "dependencies": {
+    "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/auth": "^4.9.1",
+    "@nuxtjs/axios": "^5.12.1",
+    "@nuxtjs/dotenv": "^1.4.1",
+    "@popperjs/core": "^2.11.0",
+    "@types/cli-spinners": "^1.3.0",
+    "@types/vue-select": "^3.16.0",
+    "@types/vuelidate": "^0.7.15",
+    "connect-logger": "0.0.1",
+    "countries-list": "^2.6.1",
+    "env-cmd": "^10.1.0",
+    "nuxt": "^2.14.0",
+    "nuxt-i18n": "^6.16.0",
+    "swiper": "5.4.5",
+    "text-mask-addons": "^3.8.0",
+    "v-mask": "^2.3.0",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-json-excel": "^0.3.0",
+    "vue-numeric-input": "^1.0.6",
+    "vue-phone-number-input": "^1.1.12",
+    "vue-select": "^3.18.3",
+    "vue-spinner": "^1.0.4",
+    "vuelidate": "^0.7.6"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.14.0",
+    "@nuxt/typescript-build": "^2.0.2",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "@types/nuxtjs__auth": "^4.8.7",
+    "node-sass": "^5.0.0",
+    "sass-loader": "^10.1.0"
+  }
+}

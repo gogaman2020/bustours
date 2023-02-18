@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  bus_api:
+    image: bus_stable_api:${TAG}
+    hostname: "bus-stable-api"
+    networks:
+      - busnet
+    environment:
+      TZ: "Europe/Moscow"
+
+networks:
+    busnet:
+        name: busnet
+        external: true

@@ -1,0 +1,48 @@
+.box {
+    position: relative;
+}
+
+.calendar {
+    position: absolute;
+    top: 0;
+    font-family: 'IBM Plex Sans', 'Avenir', Helvetica, Arial, sans-serif;
+    font-display: swap;
+    font-size: 16px;
+}
+
+.calendarBox {
+    position: absolute;
+    z-index: 100;
+    box-sizing: border-box;
+    width: 230px;
+    height: 286px;
+    border: 1px solid #202020;
+    border-radius: 8px !important;
+    background: #FFF;
+    padding: 0 4px;
+    margin-top: 4px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 4px;
+}
+
+.todayBtn {
+    display: inline-block;
+    padding: 0px 8px;
+    color: #BBB;
+    cursor: pointer;
+    border-radius: 4px !important;
+
+    &:hover {
+        background: #EEE;
+        color: #BBB;
+        text-decoration: none;
+    }
+}

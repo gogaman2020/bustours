@@ -1,0 +1,145 @@
+@import "@/styles/mixins";
+
+.root {
+
+    .control-item {
+        width: units(26.75);
+
+        &.double {
+            width: units(56.5);
+        }
+    }        
+
+    h1 {
+        margin-bottom: units(4);
+    }
+
+    .itemsRow, .innerRow {
+        @extend %itemsRow;
+        flex-wrap: wrap;
+        
+        & > div {
+            margin-right: units(3);
+            margin-top: units(1);
+        }
+    }
+
+    .innerRow {
+        margin: units(0) !important;
+    }
+
+    .createMessages {
+        font-size: 18px; 
+        margin-bottom: units(4);
+
+        .createError {
+            color: red;
+            white-space: pre;
+        }
+
+        .createSuccess {
+            color: green;
+        }
+    }
+}
+
+.tour {
+    padding: 25px;
+    margin-top: 50px;
+    border: 1px silver solid;
+    //background: #f9f9f9;
+    width: 100%;
+    border-radius: $control-border-radius;
+}
+
+.menu-beverage {
+    width: 90%;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: units(3);
+    @include font(main);
+
+    .itemsRow {
+        @extend %itemsRow;
+        
+        & > div {
+            margin-top: units(1);
+        }
+    }    
+
+    &.single {
+        width: 70%;
+    }
+
+    & > div {
+        width: 45%;
+
+        h2 {
+            margin-top: units(0);
+            margin-bottom: units(1);
+        }
+    }
+}
+
+.add-tour-button, .removeTourButton {
+    margin-top: units(4);
+    margin-bottom: units(4);
+    display: block;
+}
+
+.create-button {
+    display: block;
+    width: units(25);
+}
+
+.multicheck {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.multicheckItem {
+    width: 47%;
+    margin-top: units(3);
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+
+    & > div {
+        width:100%;
+        justify-self: left;
+    }
+}
+
+.columnTitles {
+    & > div {
+        width:24px;
+        margin-left: units(1);
+        text-align: center;
+    }
+}
+
+.multicheckBox {
+    color:red;
+    //justify-content: right !important;
+    width: auto;
+    margin-left: units(1);
+}
+
+.removeTimeButton {
+    //margin-right: units(2);
+}
+
+.numberInput {
+    background: #f5f5f5;
+    border: none;
+    height: 100%;
+    font-family: "Garamond MT W04";
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 1.4444444444em;
+    letter-spacing: 0.0555555556em;
+    outline: none;
+    padding: 0px;
+}

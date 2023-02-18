@@ -1,0 +1,206 @@
+{
+	"RuleTypesTwoSeats": [
+		"OneFreeSeat",
+		"FreeTable"
+	],
+	"RuleTypesFourSeats": [
+		"OneFreeSeat",
+		"TwoFreeSeats",
+		"ThreeFreeSeats"
+	],
+	"Rules": [
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "OneFreeSeat",
+			"ActionYesYes": {
+				"Type": "Seat1of2_Seat1of4"
+			},
+			"ActionYesNo": {
+				"Type": "Seat1of2"
+			},
+			"ActionNoYes": {
+				"Type": "Seat1of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "TwoFreeSeats"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "TwoFreeSeats",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Seat2of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "ThreeFreeSeats"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "ThreeFreeSeats",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Seat3of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "OneFreeSeat"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "OneFreeSeat",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Seat2of2"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "OtherOption"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "TwoFreeSeats",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "ThreeFreeSeats",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		}
+	],
+	"Debug": {
+		"Code": "1_Seat",
+		"Name": "1 посетитель выбрал опцию 'Только место'",
+		"RuleTypesTwoSeats": {
+			"OneFreeSeat": {
+				"Text": "есть 1 место за столом на 2х",
+				"Color": "black",
+				"Background": "#B4C6E7"
+			},
+			"FreeTable": {
+				"Text": "есть свободные 2х местные столы",
+				"Color": "black",
+				"Background": "#4472C4"
+			}
+		},
+		"RuleTypesFourSeats": {
+			"OneFreeSeat": {
+				"Text": "есть 1 место за столом на 4х",
+				"Color": "black",
+				"Background": "#E2EFDA"
+			},
+			"TwoFreeSeats": {
+				"Text": "есть 2 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			},
+			"ThreeFreeSeats": {
+				"Text": "есть 3 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			}
+		},
+		"Actions": [
+			{
+				"Types": [ "Redirect" ],
+				"Text": "",
+				"Description": "Переход к другому правилу",
+				"Color": "black",
+				"Background": "white"
+			},
+			{
+				"Types": [ "Seat1of2_Seat1of4", "Seat1of2_Seat2of4", "Seat1of2_Seat3of4" ],
+				"Text": "предложим",
+				"Description": "Доступно - места за 2х и 4х местными столами. Рекомендуемое - место за 2х местным столом.",
+				"Color": "black",
+				"Background": "#FFC000"
+			},
+			{
+				"Types": [ "Seat1of2" ],
+				"Text": "предложим",
+				"Description": "Доступно - место за столом на 2х. Рекомендуемое - место за столом на 2х.",
+				"Color": "black",
+				"Background": "#BDD6EE"
+			},
+			{
+				"Types": [ "Seat1of4", "Seat2of4", "Seat3of4" ],
+				"Text": "предложим",
+				"Description": "Доступно - место за 4х местным столом. Рекомендуемое - место за 4х местным столом.",
+				"Color": "black",
+				"Background": "#C5E0B3"
+			},
+			{
+				"Types": [ "Seat1of2" ],
+				"Text": "предложим",
+				"Description": "Доступно - место за столом на 2х. Рекомендуемое - место за столом на 2х.",
+				"Color": "black",
+				"Background": "#BDD6EE"
+			},
+			{
+				"Types": [ "Seat2of2" ],
+				"Text": "предложим",
+				"Description": "Доступно - место за столом на 2х (не VIP). VIP стол только целиком. Рекомендуемое - место за столом на 2х (не VIP).",
+				"Color": "black",
+				"Background": "#4472C4"
+			},
+			{
+				"Types": [ "OtherOption" ],
+				"Text": "",
+				"Description": "Предлагаем выбрать другую опцию или иной день или время",
+				"Color": "black",
+				"Background": "#FF0000"
+			},
+			{
+				"Types": [ "Unavailable" ],
+				"Text": "",
+				"Description": "Недостижимое состояние",
+				"Color": "black",
+				"Background": "#A64D79"
+			}
+		]
+	}
+}

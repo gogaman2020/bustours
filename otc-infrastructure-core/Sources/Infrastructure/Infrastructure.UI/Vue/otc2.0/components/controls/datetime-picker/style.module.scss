@@ -1,0 +1,50 @@
+.datetime-box {
+	position: relative;
+    border-bottom: 0;
+    font-size: 16px;
+
+    &__label {
+		display: inline-block;
+		font-size: 16px;
+		color: #202020;
+		margin-bottom: 3px;
+	}
+	&__tooltip {
+		margin-left: 4px;
+    }
+    input {
+        border: 1px #6E7C8D solid;
+        border-radius: 4px !important;
+        width: 100%;
+        padding: 4px 8px;
+    }
+    input::placeholder {
+        color: #b7bec6;
+	}
+}
+
+.date {
+    //width: auto !important;
+    position: relative !important;
+    display: block !important;
+}
+
+.dateValue {
+    box-sizing: border-box;
+    border-radius: 4px !important;
+    border: 0.75px solid #6E7C8D;
+    height: 32px;
+    width: 100%;
+    padding: 0 30px 0 6px;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans', 'Avenir', Helvetica, Arial, sans-serif;
+    outline: none !important;
+
+    &:focus {
+        border: 1.5px solid #6E7C8D;
+    }
+}
+
+.datePopup{
+    z-index: 999999 !important;
+}

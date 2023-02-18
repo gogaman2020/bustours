@@ -1,0 +1,254 @@
+{
+	"RuleTypesTwoSeats": [
+		"FreeTable",
+		"OneFreeSeat"
+	],
+	"RuleTypesFourSeats": [
+		"OneFreeSeat",
+		"TwoFreeSeats",
+		"ThreeFreeSeats",
+		"MoreFreeTable"
+	],
+	"Rules": [
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "OneFreeSeat",
+			"ActionYesYes": {
+				"Type": "Table2"
+			},
+			"ActionYesNo": {
+				"Type": "Table2"
+			},
+			"ActionNoYes": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "OneFreeSeat"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "OneFreeSeat"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "TwoFreeSeats",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "ThreeFreeSeats",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "MoreFreeTable",
+			"ActionYesYes": {
+				"Type": "Unavailable"
+			},
+			"ActionYesNo": {
+				"Type": "Unavailable"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "OneFreeSeat",
+			"ActionYesYes": {
+				"Type": "Seat1of2_Seat1of4"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "TwoFreeSeats"
+			},
+			"ActionNoYes": {
+				"Type": "Seat1of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "TwoFreeSeats"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "TwoFreeSeats",
+			"ActionYesYes": {
+				"Type": "Seat1of2_Seat2of4"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "ThreeFreeSeats"
+			},
+			"ActionNoYes": {
+				"Type": "Seat2of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "ThreeFreeSeats"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "ThreeFreeSeats",
+			"ActionYesYes": {
+				"Type": "Seat1of2_Seat3of4"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "MoreFreeTable"
+			},
+			"ActionNoYes": {
+				"Type": "Seat3of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "OneFreeSeat",
+				"RedirectRuleTypesFourSeats": "MoreFreeTable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "OneFreeSeat",
+			"RuleTypesFourSeats": "MoreFreeTable",
+			"ActionYesYes": {
+				"Type": "Seat1of2_Table4"
+			},
+			"ActionYesNo": {
+				"Type": "OtherOption"
+			},
+			"ActionNoYes": {
+				"Type": "Table4"
+			},
+			"ActionNoNo": {
+				"Type": "OtherOption"
+			}
+		}
+	],
+	"Debug": {
+		"Code": "1_Table",
+		"Name": "1 посетитель выбрал опцию 'Только отдельный стол'",
+		"RuleTypesTwoSeats": {
+			"FreeTable": {
+				"Text": "есть свободные 2х местные столы",
+				"Color": "black",
+				"Background": "#4472C4"
+			},
+			"OneFreeSeat": {
+				"Text": "есть 1 место за столом на 2х",
+				"Color": "black",
+				"Background": "#B4C6E7"
+			}
+		},
+		"RuleTypesFourSeats": {
+			"OneFreeSeat": {
+				"Text": "есть 1 место за столом на 4х",
+				"Color": "black",
+				"Background": "#E2EFDA"
+			},
+			"TwoFreeSeats": {
+				"Text": "есть 2 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			},
+			"ThreeFreeSeats": {
+				"Text": "есть 3 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			},
+			"MoreFreeTable": {
+				"Text": "еще свободный стол на 4х",
+				"Color": "white",
+				"Background": "#548235"
+			}
+		},
+		"Actions": [
+			{
+				"Types": [ "Redirect" ],
+				"Text": "",
+				"Description": "Переход к другому правилу",
+				"Color": "black",
+				"Background": "white"
+			},
+			{
+				"Types": [ "Table2" ],
+				"Text": "предложим",
+				"Description": "Доступно - столы на 2х. Рекомендуемое - не VIP, сортировка по возрастанию номера стола. Если остались только VIP - выбрать. Правило выбора VIP - уточнить.",
+				"Color": "black",
+				"Background": "#4472C4"
+			},
+			{
+				"Types": [ "Seat1of2_Seat1of4", "Seat1of2_Seat2of4", "Seat1of2_Seat3of4" ],
+				"Text": "предложим",
+				"Description": "Доступно - места за 2х и 4х местными столами. Рекомендуемое - место за 2х местным столом.",
+				"Color": "black",
+				"Background": "#FFC000"
+			},
+			{
+				"Types": [ "Seat1of2_Table4" ],
+				"Text": "предложим",
+				"Description": "Доступно - место за 2х местным столом и столы на 4х. Рекомендуемое - место за 2х местным столом.",
+				"Color": "black",
+				"Background": "#FFD965"
+			},
+			{
+				"Types": [ "Table4" ],
+				"Text": "предложим",
+				"Description": "Доступно - столы на 4х. Рекомендуемое - стол на 4х, сортировка по возрастанию номера стола.",
+				"Color": "black",
+				"Background": "#548135"
+			},
+			{
+				"Types": [ "Seat1of4", "Seat2of4", "Seat3of4" ],
+				"Text": "предложим",
+				"Description": "Доступно - место за 4х местным столом. Рекомендуемое - место за 4х местным столом.",
+				"Color": "black",
+				"Background": "#C5E0B3"
+			},
+			{
+				"Types": [ "OtherOption" ],
+				"Text": "",
+				"Description": "Предлагаем выбрать другую опцию или иной день или время",
+				"Color": "black",
+				"Background": "#FF0000"
+			},
+			{
+				"Types": [ "Unavailable" ],
+				"Text": "",
+				"Description": "Недостижимое состояние",
+				"Color": "black",
+				"Background": "#A64D79"
+			}
+		]
+	}
+}

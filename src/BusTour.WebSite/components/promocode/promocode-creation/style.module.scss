@@ -1,0 +1,51 @@
+@import "/styles/mixins.scss";
+
+.fields-container {
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 50px;
+	row-gap: 10px;
+
+	&__control {
+		@include media("<=phone") {
+			width: 100%;
+		}
+
+		& > div {
+			width: 220px;
+
+			@include media("<=phone") {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.creation-button {
+	margin-top: 20px;
+
+	@include media("<=phone") {
+		width: 100%;
+	}
+}
+
+.greedy {
+	width: 100%;
+	display: flex;
+	column-gap: 50px;
+}
+
+.calendar-auto-height {
+	& > div:nth-child(2) {
+		height: auto;
+	}
+}
+
+// Компонент ControlItem задает padding в зависимости от типа слота, однако слоты не реактивны, 
+// поэтому обновление через условный рендеринг не произошло, отступы добавлям форсированно.
+.numeric-field-padding {
+	& > div:nth-child(2) {
+		padding: 2px 12px;
+	}
+}

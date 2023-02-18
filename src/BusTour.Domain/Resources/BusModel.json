@@ -1,0 +1,109 @@
+{
+	"FirstFloor": {
+		"Tables": [
+			{
+				"Id": 13,
+				"Type": "Two",
+				"Number": "12"
+			},
+			{
+				"Id": 14,
+				"Type": "Two",
+				"Number": "14"
+			},
+			{
+				"Id": 15,
+				"Type": "Four",
+				"Number": "15"
+			},
+			{
+				"Id": 16,
+				"Type": "Two",
+				"Number": "17"
+			},
+			{
+				"Id": 17,
+				"Type": "Two",
+				"Number": "18"
+			},
+			{
+				"Id": 18,
+				"Type": "Two",
+				"Number": "19",
+				"IsLastRow": true
+			},
+			{
+				"Id": 19,
+				"Type": "Two",
+				"Number": "20",
+				"IsLastRow": true
+			}
+		]
+	},
+	"SecondFloor": {
+		"Tables": [
+			{
+				"Id": 1,
+				"Type": "Two",
+				"Number": "VIP 1",
+				"IsFirstRow": true
+			},
+			{
+				"Id": 2,
+				"Type": "Two",
+				"Number": "VIP 2",
+				"IsFirstRow": true
+			},
+			{
+				"Id": 3,
+				"Type": "Two",
+				"Number": "1"
+			},
+			{
+				"Id": 4,
+				"Type": "Four",
+				"Number": "2"
+			},
+			{
+				"Id": 5,
+				"Type": "Two",
+				"Number": "3"
+			},
+			{
+				"Id": 6,
+				"Type": "Four",
+				"Number": "4"
+			},
+			{
+				"Id": 7,
+				"Type": "Two",
+				"Number": "5"
+			},
+			{
+				"Id": 8,
+				"Type": "Four",
+				"Number": "6"
+			},
+			{
+				"Id": 9,
+				"Type": "Two",
+				"Number": "7"
+			},
+			{
+				"Id": 10,
+				"Type": "Four",
+				"Number": "8"
+			},
+			{
+				"Id": 11,
+				"Type": "Two",
+				"Number": "9"
+			},
+			{
+				"Id": 12,
+				"Type": "Four",
+				"Number": "11"
+			}
+		]
+	}
+}

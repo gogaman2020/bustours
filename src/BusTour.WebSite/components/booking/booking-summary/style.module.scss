@@ -1,0 +1,45 @@
+@import "/styles/mixins.scss";
+
+$breakpoints: map-merge($breakpoints, ("custom": 862px));
+
+.booking-summary {
+	&__panels-wrapper > div {
+		@include media("<=custom") {
+			margin: 0 auto;
+		}
+		&:not(:last-child) {
+			margin-bottom: 14px;
+		}
+	}
+
+	&__title {
+		@include media("<=custom") {
+			text-align: center;
+		}
+		margin-bottom: 15px;
+	}
+
+	&__certificate-warning {
+		color:red !important;
+		display: block !important;
+		background-color: transparent !important;
+		text-align: justify !important;
+	}
+
+	.panel {
+		margin-top: units(2);
+	}
+
+	.right {
+		text-align: right !important;
+		width: 100%;
+
+		div {
+			text-align: right !important;
+		}
+	}
+
+	a {
+		text-decoration: underline;
+	}
+}

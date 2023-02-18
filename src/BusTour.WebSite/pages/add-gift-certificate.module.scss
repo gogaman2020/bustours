@@ -1,0 +1,148 @@
+@import "@/styles/mixins";
+
+%desktop-max {
+    max-width: 400px;
+}
+
+.root {
+
+    .amount-variant {
+        width: units(18);
+    }
+
+    .itemsRow {
+        justify-content: space-between;
+        @extend %desktop-max;
+    }
+
+    .firstRow {
+        justify-content: left;
+
+        .validUntil {
+            @include font(main);
+            margin-left: units(5);
+            width: units(22);
+        }        
+
+        @include media('<=phone') {
+            display: block;
+            max-width: 100%;
+
+            .control {
+                width: 100%;
+            }
+
+            .validUntil {
+                margin-left: units(0);
+                margin-top: units(4);
+            }     
+
+        }
+    }
+}
+
+.amountVariantOption {
+    line-height: 1.8em;
+}
+
+.message {
+    @include font(main);
+    margin: units(3) 0px units(4) 0px;
+}   
+
+.howItWorks {
+    margin-top: units(4);
+    margin-bottom: units(4);
+}    
+
+.notRefundable {
+    margin-top: units(4);
+}
+
+.surprisesWrapper {
+    h2 {
+        margin: units(0) 0px units(2) 0px;
+    }
+    .surprises {
+        display: grid;
+        grid-template-columns: auto 100px 100px;
+        width: 100%;
+        max-width: 400px;
+        grid-row-gap: 15px;
+        justify-items:end;
+        align-items: center;
+        @include font(main);
+
+        :global(select) {
+            min-width: auto;
+        }
+
+        .quantity {
+            width: units(12);
+            padding-left: units(1);
+        }
+    }
+}
+
+.commentWrapper {
+    width: 100%;
+    margin: units(4) 0px !important;
+}
+
+.create-button {
+    display: block;
+    margin-top: units(5);
+
+    width: 207px;
+
+    @include media("<=phone") {
+        width: 100%;
+    }
+}
+
+.right {
+    justify-self: end;
+   
+    [class*="control"] {
+        justify-content: right !important;
+    }  
+} 
+
+.left {
+    justify-self: start;
+}
+
+.sidepanel {
+    width: units(50);
+}
+
+.howItWorks {
+    @include font(subtitle1Bold);
+}
+
+.stepConfirm {
+    @include media('>md-tablet') {
+        display: none;
+    }
+}
+
+.stepPay {
+    &:not(.step2) {
+        @include media('<=md-tablet') {
+            display: none;
+        }
+    }
+}
+
+.error, .success {
+    @include font(main);
+    margin: units(2) 0;
+}
+
+.error {
+    color:red;
+}
+
+.success {
+    color:green;
+}

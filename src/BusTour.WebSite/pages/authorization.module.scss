@@ -1,0 +1,31 @@
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &_title {
+        padding-top: 8vh;
+        padding-bottom: 16vh;
+        width: 474px;
+        margin: auto;
+        min-width: 374px;
+
+        color: #000000;
+    }
+}
+
+.authorization {
+    &_title {
+        font-family: Helvetica;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 31px;
+        letter-spacing: 4.00008px;
+        text-transform: uppercase;
+        min-width: 374px;
+
+        color: #000000;
+    }
+}

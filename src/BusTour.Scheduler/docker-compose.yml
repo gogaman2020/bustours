@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  bus_scheduler:
+    container_name: "bus_scheduler"
+    build:
+      context: ../../../
+      dockerfile: ./BusTour/src/BusTour.Scheduler/${DEVOPS_DOCKERFILE}
+      args:
+        buildno: ${DEVOPS_BUILD}
+    restart: unless-stopped
+    volumes:
+      - /var/log/app:/app/logs
+    labels: 
+      SRV_NAME: winsrv
+    logging:
+      driver: "json-file"
+      options:
+        max-size: 10m
+        max-file: "3"
+        labels: "scheduler_status"
+        env: "os"

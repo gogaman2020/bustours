@@ -1,0 +1,66 @@
+@import "/styles/mixins";
+
+.order-list {
+	background-color: #F5F5F5;
+	border-radius: 4px;
+	padding: 10px 10px 25px;
+
+	&__title {
+		font-family: "Helvetica Neue";
+		font-weight: 700;
+		font-size: rem(15);
+		line-height: em(31, 15);
+		letter-spacing: em(4, 15);
+	}
+}
+
+.orderInfoButton {
+	width: 10em;
+}
+
+.grid {
+	&__row-buttons-wrapper {
+		display: flex;
+		column-gap: 20px;
+	}
+}
+
+td.bb-grid-column {
+	&--custom {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+
+	&--relative {
+		position: relative;
+	}
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.block-cell-template {
+    height: 100%;
+    top: 0;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	border-radius: 4px;
+	padding: 0 10px;
+
+	&--red {
+		background-color: #F00C0C4D;
+	}
+
+	&--green {
+		background-color: #C1E5B8;
+	}
+
+	&--white {
+		background-color: #FFF;
+	}
+}

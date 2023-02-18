@@ -1,0 +1,83 @@
+@import "/styles/mixins.scss";
+
+%font-styles {
+	font-family: "Helvetica Neue";
+	font-size: rem(15);
+	line-height: em(20, 15);
+	letter-spacing: em(1, 15);
+	font-weight: 400;
+}
+
+%overflow-styles {
+	word-break: break-word;
+	text-overflow: clip;
+	overflow: hidden;
+}
+
+.root {
+	overflow-y: auto;
+	overflow-x: hidden;
+	background: inherit;
+
+	&.noScroll {
+		overflow-y: hidden;
+	}
+}
+
+.bb-grid {
+	width: 100%;
+
+	thead tr th {
+		position: sticky;
+		top: 0px;
+		background: inherit;
+	}
+
+	&[v-cloak] {
+		table-layout: fixed;
+	}
+    
+	&__row {
+		background-color: #F5F5F5;
+	}
+
+	&__column {
+		padding: 20px 10px;
+		text-align: center;
+		@extend %font-styles;
+		@extend %overflow-styles;
+		overflow: visible;
+		border-radius: 4px;
+
+		&.white {
+			background: white;
+		}	
+	}
+
+	&__head-cell {
+		@extend %font-styles;
+		@extend %overflow-styles;
+		padding: 5px 0px;
+
+		&:not(:first-child) {
+			padding-left: 10px;
+		}
+
+		&:not(:last-child) {
+			padding-right: 10px;
+		}
+	}
+
+	&__grouping-row {
+		@extend %font-styles;
+		font-weight: 700;
+	}
+
+	&__pager {
+		//margin-top: 10px;
+		position: sticky;
+		bottom: -1px;
+		background: white;	
+		padding-top: 10px;	
+	}
+}

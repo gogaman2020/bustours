@@ -1,0 +1,325 @@
+@import "/styles/mixins.scss";
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+.admin-list-wrap {
+    margin-top: 40px;
+    max-width: 1200px;
+    min-width: 780px;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+
+    h3{
+        padding: 5px 16px;
+    }
+}
+.container {
+    padding: 50px 45px;
+    width: 100%;
+
+    &_control {
+        width: max-content;
+    }
+
+    &_list {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 0 16px 16px 16px;
+        width: 100%;
+        min-height: max-content;
+        max-height: 488px;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+}
+.title {
+    &_control {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 21px;
+        line-height: 31px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+
+    &_list {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 31px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+}
+
+.btn-add {
+    display: block;
+    margin-top: 13px;
+    margin-left: -25px;
+    width: 150px;
+
+    :first-child {
+        font-family: "Helvetica Neue";
+        font-size: 16px;
+        width: 100%;
+    }
+}
+
+.block-title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+.left-container {
+    width: 100%;
+    margin-right: 16px;
+}
+.footer-link {
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 3px;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.payment-block {
+    &:not(:first-child) {
+        margin-top: 32px;
+    }
+}
+.setting {
+    &_wrap {
+        width: 440px;
+        display: flex;
+        flex-wrap: wrap;
+
+        select{
+            width: 200px;
+            font-size: 18px;
+        }
+        input{
+            font-size: 18px;
+        }
+    }
+
+    &_item {
+        margin: 10px 20px 0 0;
+        display: inline-block;
+        border-radius: 4px;
+        width: 200px;
+    }
+
+    &_input {
+        width: 200px;
+        border-radius: 4px;
+        height: 40px;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.5;
+        padding: 7px 14px;
+        background: #f5f5f5;
+    }
+
+    &_password, &_password input {
+        width: 200px;
+        background: #f5f5f5;
+    }
+
+    &_checkbox {
+        width: 374px;
+        height: 32px;
+        font-size: 10px;
+        vertical-align: middle;
+        padding: 0px 14px;
+        line-height: 13px;
+    }
+}
+
+.list {
+    &_row {
+        margin: 8px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &_item {
+        width: 190px;
+        margin-right: 30px;
+        display: inline-block;
+        text-transform: none;
+        letter-spacing: normal;
+
+        select{
+            font-family: "Garamond MT W04";
+            width: 100%;
+            font-size: 18px;
+        }
+
+        &_actions {
+            width: 470px;
+            text-align: right;
+        }
+    }
+
+    &_input {
+        width: 100%;
+        background: #ffffff;
+        border-radius: 4px;
+        height: 40px;
+        font-family: "Garamond MT W04";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.5;
+        padding: 7px 14px;
+    }
+
+    &_password, &_password input {
+        font-weight: normal;
+        width: 100%;
+        background: #ffffff;
+        border-radius: 4px;
+        height: 40px;
+    }
+}
+
+.setting-select {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.5;
+    padding: 7px 14px;
+    background: #c4c4c4;
+}
+
+.setting-hr {
+    width: 374px;
+}
+
+.setting-field {
+    margin-top: 16px;
+}
+
+.setting-name {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: left;
+    line-height: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+
+    &_small {
+        text-align: left;
+        font-size: 8px;
+        line-height: 13px;
+        letter-spacing: 3px;
+        text-transform: lowercase;
+        display: flex;
+
+        .checkbox {
+            margin: 4px 4px 4px 0;
+        }
+    }
+}
+
+.block-btn {
+    margin: 10px 0;
+    text-align: right;
+    width: 374px;
+    height: 40px;
+
+    a {
+        display: inline-block;
+        padding: 0;
+        width: auto;
+    }
+}
+
+.btn {
+    background: #ffffff;
+    width: 100px;
+    height: 39px;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: solid 1px #000000;
+    display: inline-block;
+    box-sizing: border-box;
+    vertical-align: top;
+    margin-left: 25px;
+    border-radius: 4px;
+    transition: background-color 0.5s ease, color 0.5s ease, border-color 0.5s ease, fill 0.5s ease;
+
+    &:hover{
+        background-color: #000000;
+        color: #fff;
+    }
+}
+
+.blockTitleNode {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 13px;
+    letter-spacing: 3px;
+    color: #000000;
+    margin-bottom: -7px;
+    margin-top: 13px;
+}
+
+.validation-message {
+    line-height: 17px;
+    font-size: 9px;
+    color: #FC0404;
+    font-family: "Helvetica Neue";
+}
+.role-select {
+    width: 100%;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    &_white {
+        background-color: #fff;
+        border-radius: 4px;
+        option {
+            background-color: red;
+        }
+    }
+}
+@include media("<=1200px") {
+    .btn {
+        margin-left: 15px;
+    }
+    .btn-add {
+        margin-left: -15px;
+    }
+    .list {
+        &_item {
+            margin-right: 20px;
+        }
+    }
+}

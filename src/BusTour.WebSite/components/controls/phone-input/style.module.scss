@@ -1,0 +1,25 @@
+.root {
+    display: flex;
+    justify-content: space-between;
+    * {
+		box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px !important;
+	}
+}
+
+.code {
+    flex-basis: 47%;
+}
+
+.number {
+    flex-basis: 47%;
+}
+
+.withFlags {
+    .controlItem {
+        width: 100%;
+        div[class*='control'] {
+            padding: 0px;
+            background-color: initial;
+        }
+    }
+}

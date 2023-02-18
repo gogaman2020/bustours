@@ -1,0 +1,26 @@
+.booking {
+    padding: 24px;
+}
+
+.header {
+    font-size: 21px;
+    line-height: 31px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.left-container {
+    width: 100%;
+    margin-right: 30px;
+}
+
+.right-container {
+    min-width: 374px;
+}

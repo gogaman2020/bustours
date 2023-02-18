@@ -1,0 +1,53 @@
+@import "@/styles/mixins";
+
+.main {
+    display: flex;
+    justify-content: space-between;
+
+    .summary {
+        top: units(6);
+    }
+}
+
+.order {
+    margin-top: units(2);
+}
+
+.row {
+    margin-top: units(2);
+    display: flex;
+}
+
+.topControl {
+    width: units(25);
+    margin-right: units(2);
+}
+
+.topControlHalf {
+    width: units(12);
+    margin-right: units(2);
+}    
+
+.topControlOneAndHalf {
+    width: units(38.5);
+    margin-right: units(2);
+}      
+
+.topControlDouble {
+    width: units(79);
+    margin-right: units(2);
+}   
+
+.newBlock {
+    margin-top: units(4);
+}
+
+.newHalfBlock {
+    margin-top: units(2);
+}
+
+.summary {
+    position: absolute;
+    right: units(4);
+    top: units(5);
+}

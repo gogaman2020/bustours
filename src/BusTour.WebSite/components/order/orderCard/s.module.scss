@@ -1,0 +1,63 @@
+@import "@/styles/mixins";
+
+.order {
+    display: flex;
+    justify-content: space-between;
+
+    h1 {
+        margin-bottom: units(4);
+    }
+}
+
+.error, .success {
+    @include font(main);
+    margin: units(2) 0;
+}
+
+.error {
+    color:red;
+}
+
+.success {
+    color:green;
+}
+
+.printButton {
+    margin-top: units(3);
+    width: 100%;
+}
+
+.sendButton {
+    margin-top: units(1);
+    width: 100%;
+} 
+
+.customerService {
+    margin-top: units(6);
+
+    .title {
+        @include font(subtitle1);
+        margin-bottom: units(1);
+    }
+} 
+
+.emailWrapper {
+    margin-top: units(6);
+
+    .title {
+        @include font(subtitle1);
+        margin-bottom: units(1);
+    }
+
+    .edit {
+        @extend %control-layout;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.sendSuccess {
+    margin: units(2) 0;
+    color: $success-color;
+    text-align: center;
+}

@@ -1,0 +1,15 @@
+.select-text-input {
+	input {
+		width: 100%;
+		border: 1px #6E7C8D solid;
+		border-radius: 4px !important;
+		padding: 4px 8px;
+		font-size: 16px;
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.101 6.416a2 2 0 0 1-2.202 0l-3.73-2.46C-.487 2.862.287.285 2.27.285h7.46c1.983 0 2.757 2.577 1.101 3.67l-3.73 2.46z' fill='%23202020'/%3E%3C/svg%3E");
+		background-repeat: no-repeat;
+		background-position: calc(100% - 4px) 40%;
+	}
+	input::placeholder {
+		color: #b7bec6;
+	}
+}

@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Configurations>Debug;Release;Stable</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\BusModel.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\BusModel.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\otc-infrastructure-core\Sources\Infrastructure\Infrastructure.Db\Infrastructure.Db.csproj" />
+    <ProjectReference Include="..\..\otc-infrastructure-core\Sources\Infrastructure\Infrastructure.Process\Infrastructure.Process.csproj" />
+    <ProjectReference Include="..\BusTour.Common\BusTour.Common.csproj" />
+  </ItemGroup>
+
+</Project>

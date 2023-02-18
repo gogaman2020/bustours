@@ -1,0 +1,40 @@
+@import "@/styles/mixins";
+
+.root {
+
+    h1 {
+        margin-bottom: units(3);
+    }
+
+    .filter {
+        .filterRow {
+            margin-top: units(3);
+        }
+
+        .applyButton {
+            margin-top: units(3);
+        }
+
+        .filterCity {
+            width: units(20);
+        }
+    }
+
+    .certificates {
+        margin-top: units(3);
+    }
+
+    .total {
+        margin-top: units(5);
+
+        .grid {
+            margin-top: units(1);
+        }
+    }    
+
+    .exportButton {
+        margin-bottom: units(0);
+        width: fit-content;
+    }
+    
+}

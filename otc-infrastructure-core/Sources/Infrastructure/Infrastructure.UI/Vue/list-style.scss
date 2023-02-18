@@ -1,0 +1,19 @@
+﻿//@import '@progress/kendo-theme-default/dist/all.css';
+
+.btn-filter {
+    margin-right: 10px;
+}
+
+.form-control {
+    border-radius: 2px !important;
+    min-height: 34px;
+    height: unset;
+	&__disabled {
+        margin-top: 0px;
+		background-color: #ededed;
+	}
+}
+
+a.link:hover {
+    text-decoration: underline !important;
+}

@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Configurations>Debug;Release</Configurations>
+        <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+        <LangVersion>8.0</LangVersion>
+        <RootNamespace>Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp3.1'">
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.13" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.13" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(TargetFramework)' == 'net5.0'">
+        <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.FileExtensions" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NLog" Version="4.7.9" />
+        <PackageReference Include="NLog.Extensions.Logging" Version="1.7.2" />
+        <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Remove="Log\Config\NLog.config" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="Common\Logging\Config\NLog.config" />
+    </ItemGroup>
+
+</Project>

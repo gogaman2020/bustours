@@ -1,0 +1,49 @@
+@import "/styles/mixins";
+
+$breakpoints: map-merge($breakpoints, ("lg-desktop": 1440px));
+
+.tour-info {
+	display: grid;
+	grid-template-areas: 
+		"summary orders"
+		"summary conflicts"
+	;
+	grid-auto-columns: min-content 1fr;
+	gap: 25px 70px;
+	margin-top: 20px;
+
+	&__summary {
+		grid-area: summary;
+	}
+
+	&__order-list {
+		grid-area: orders;
+	}
+
+	&__order-conflicts {
+		grid-area: conflicts;
+
+		&-grid {
+			margin-top: 20px;
+			max-width: 700px;
+		}
+	}
+
+	&__conflicts-warning {
+		font-family: "Helvetica Neue";
+		text-transform: uppercase;
+		font-weight: 500;
+		font-size: rem(10);
+		line-height: em(13, 10);
+		letter-spacing: em(1, 10);
+		color: #FC0404;
+	}
+
+	@include media("<=lg-desktop") {
+		grid-template-areas: 
+			"summary 	summary"
+			"orders 	orders"
+			"conflicts 	conflicts"
+		;
+	}
+}

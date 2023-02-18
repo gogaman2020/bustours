@@ -1,0 +1,84 @@
+@import "@/styles/mixins";
+
+h1 {
+    margin-top: 0;
+    margin-bottom: units(4);
+}
+
+.root {
+    margin-top: units(4);
+
+    &.editingMode {
+        margin-top: units(0);
+    }
+}
+
+.add-tour-button, .removeTourButton {
+    margin-top: units(4);
+    margin-bottom: units(4);
+    display: block;
+}
+
+.stops {
+    display: block;
+
+    :global([class*="control"]) {
+        display: block;
+    }
+
+    .stop {
+        margin-top: units(1);
+    }
+}
+
+.bottomButtons {
+    padding-top: units(2);
+    & > button {
+        margin-right: units(2);
+    }
+}
+
+.removeStop {
+    margin-left: units(2);
+}
+
+.conflicts {
+    width: units(120);
+    margin-top: units(4);
+
+    h2 {
+        margin-bottom: units(3);
+    }
+}
+
+.menus {
+    margin-top: units(4);
+}
+
+.menuBeverageItem {
+    display: flex;
+}
+
+.error {
+    @include font(main);
+    margin: units(2) 0;
+    color:red;
+}
+
+.addButtons {
+    margin-top: 0 !important;
+
+    label {
+        display: none !important;
+    }
+}
+
+.summary {
+    margin-top: -units(4);
+}
+
+.beverageGroupName {
+    @include font(subtitle1);
+    margin-left: units(1);
+    margin-top: units(2);
+}

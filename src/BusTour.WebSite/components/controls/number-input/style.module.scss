@@ -1,0 +1,42 @@
+.number-input {
+    display: flex;
+
+    input {
+        border: 1px solid #000000;
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+        box-sizing: border-box;
+    }
+
+    input::-webkit-inner-spin-button,
+    input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: -16px;
+        padding: 9px 0;
+    }
+
+    button:first-child {
+        transform: rotate(180deg);
+    }
+    button:last-child {
+        transform: rotate(360deg); //to increase z-index
+    }
+    button {
+        display: block;
+        width: 12px;
+        height: 7px;
+        background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.93395 7.99967L0.569638 0.454381L7.49723 0.546285L3.93395 7.99967Z' fill='%23C4C4C4'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: transparent;
+        border: 0;
+        cursor: pointer;
+    }
+}

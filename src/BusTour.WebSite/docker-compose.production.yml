@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  bus_site:
+    image: bus_site:${TAG}
+    hostname: "bus-site"
+    networks:
+      - busnet
+    environment:
+      TZ: "Europe/London"
+
+networks:
+    busnet:
+        name: busnet
+        external: true

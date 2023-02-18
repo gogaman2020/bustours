@@ -1,0 +1,121 @@
+// Миксин для добавления шрифтов
+// Параметры:
+// 	 $font-family  [обязательный]    [string]: будет использоваться в font-family, в названии файлов и содержащей их директории
+// 	 $font-weight  [обязательный]    [number]: численная жирность шрифта (100 - 900)
+// 	 $extentions   [обязательный]    [ list ]: список расширений файлов шрифтов (см. заметки)
+// 	 $font-display [не обязательный] [string]: способ рендера шрифта, по умолчанию "swap"
+// 	 $font-style   [не обязательный] [string]: начертание шрифта (курсив и т.д.), по умолчанию "normal"
+// Заметки:
+// 	 Порядок расширений шрифтов важен. 
+// 	 Лучше указывать в порядке возрастания размера, чтобы шрифты грузились быстрее: (woff2, woff, ttf, eot)
+// Использование: 
+//   @include font-face("Garamond MT W04", 400, ("woff2", "woff", "ttf", "eot"));
+//   Можно опционально передавать не предусмотренные в этом миксине свойства, например:
+//   @include font-face("Garamond MT W04", 400, ("woff2", "woff", "ttf", "eot")) {
+//		font-variant: value;
+//		font-stetch: value;
+//      ...
+//	 }
+//   Они добавятся к итоговому коду CSS.
+// Результат: 
+//  @font-face {
+//  	font-family: "Garamond MT W04";
+//  	font-display: swap;
+//  	src: url("/_nuxt/static/fonts/Garamond MT W04/Garamond MT W04 Regular.eot");
+//  	src: local("Garamond MT W04 Regular"), 
+//			url("/_nuxt/static/fonts/Garamond MT W04/Garamond MT W04 Regular.woff2") format("woff2"), 
+//			url("/_nuxt/static/fonts/Garamond MT W04/Garamond MT W04 Regular.woff") format("woff"),
+//			url("/_nuxt/static/fonts/Garamond MT W04/Garamond MT W04 Regular.ttf") format("truetype");
+//  	font-weight: 400;
+//  	font-style: normal;
+//      [опциональные переданные свойства]
+//  }
+
+@mixin font-face($font-family, $font-weight, $extentions, $font-display: "swap", $font-style: normal) {
+	$font-weights: (
+		100: "Thin", 
+		200: "Extra Light", 
+		300: "Light",
+		400: "Regular",
+		500: "Medium",
+		600: "Semi Bold",
+		700: "Bold",
+		800: "Extra Bold",
+		900: "Black"
+	);
+
+	$font-weight-text: map-get($font-weights, $font-weight);
+
+	$extention-to-format: (
+		"eot": "embedded-opentype",
+		"otf": "opentype",
+		"ttf": "truetype",
+		"woff": "woff",
+		"woff2": "woff2",
+		"svg": "svg"
+	);
+
+	$base-path: "~static/fonts/" + $font-family + "/";
+	$font-style-suffix: "";
+
+	@if ($font-style != normal) {
+		$font-style-suffix: " " + to-upper-case(str-slice(#{$font-style}, 1, 1)) + str-slice(#{$font-style}, 2);
+	}
+
+	$filename: $font-family + " " + $font-weight-text + $font-style-suffix;
+	$path: $base-path + $filename;
+
+	@font-face {
+		font-family: "#{$font-family}";
+		font-display: #{$font-display};
+
+		@if (index($extentions, "eot")) {
+			$url: $path + ".eot";
+			src: url(#{$url});
+		}
+
+		$url: $font-family + " " + $font-weight-text + $font-style-suffix;
+		$sources: local("#{$url}");
+
+		@each $extention in $extentions {
+			@if ($extention != "eot") {
+				$url: $path + "." + $extention;
+				$format: map-get($extention-to-format, $extention);
+				$sources: append($list: $sources, $val: url("#{$url}") format($format), $separator: comma);
+			}
+		}
+
+		src: #{$sources};
+		font-weight: #{$font-weight};
+		font-style: #{$font-style};
+
+		@content;
+	}
+}
+
+$font-extentions: ("woff2", "woff", "ttf", "eot");
+
+@include font-face("Garamond MT W04", 400, $font-extentions);
+@include font-face("Garamond MT W04", 400, $font-extentions, $font-style: italic);
+
+@include font-face("Helvetica Neue", 400, $font-extentions);
+@include font-face("Helvetica Neue", 500, $font-extentions);
+@include font-face("Helvetica Neue", 700, $font-extentions);
+
+@include font-face("Muller", 700, $font-extentions);
+
+@font-face {
+	font-family: "PTSerif";
+	src: url("~static/fonts/PTSerif/PTSerif-Regular.ttf") format("ttf");
+	font-weight: 400;
+	font-style: normal;
+	unicode-range: U+0400-04FF;
+}
+
+@font-face {
+	font-family: "PTSerif";
+	src: url("~static/fonts/PTSerif/PTSerif-Italic.ttf") format("ttf");
+	font-weight: 400;
+	font-style: italic;
+	unicode-range: U+0400-04FF;
+}

@@ -1,0 +1,70 @@
+@import "@/styles/mixins";
+
+.root {
+    width: 100%;
+
+    &.disabled {
+        :global(.vs__actions) {
+            display: none;
+        }
+    }
+}
+
+.selected{
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    @include media("<phone") {
+        width: 250px;
+    }
+}
+.selectlist{
+    width: 130px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    @include media("<phone") {
+        width: 250px;
+        white-space: normal;
+        overflow:visible;
+        text-overflow:clip;
+
+    }
+
+}
+.selected:hover::after { 
+    content: attr(data-title); 
+    position: absolute; 
+    left: 0; right: 0; top: 58px; 
+    z-index: 1; 
+    background: rgb(255, 255, 255, 1.0); 
+    color: rgb(7, 7, 7, 1.0); 
+    text-align: left; 
+    font-family: "Garamond MT W04";
+    font-size: 16px; 
+    padding: 5px 10px; 
+    white-space: normal;
+    width: 100%;
+   }
+
+.select {
+    @include font(main);
+    padding: 0 0 0 0;
+    height: 100%;
+    min-width: 214px;
+    border-radius: 4px;
+}
+
+.opener {
+    background-image: url(/images/icons/dropdown-arrow.png);
+    //background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+}
+
+[class="vs__selected-options"] { 
+    pointer-events: none;
+}

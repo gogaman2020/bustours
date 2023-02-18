@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <Configurations>Debug;Release</Configurations>
+	  <TargetFrameworks>net5.0;netcoreapp3.1</TargetFrameworks>
+	  <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\Queries\SelectProcessState-my.sql" />
+    <None Remove="Repositories\Queries\SelectProcessState.pg.sql" />
+    <None Remove="Repositories\Queries\UpsertProcessState-my.sql" />
+    <None Remove="Repositories\Queries\UpsertProcessState.pg.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Repositories\Queries\SelectProcessState.pg.sql" />
+    <EmbeddedResource Include="Repositories\Queries\UpsertProcessState.pg.sql" />
+    <EmbeddedResource Include="Repositories\Queries\UpsertProcessState-my.sql" />
+    <EmbeddedResource Include="Repositories\Queries\SelectProcessState-my.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Infrastructure.Common\Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\Infrastructure.Db\Infrastructure.Db.csproj" />
+  </ItemGroup>
+
+</Project>

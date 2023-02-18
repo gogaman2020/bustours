@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  bus_scheduler:
+    image: bus_stable_scheduler:${TAG}
+    hostname: "bus-stable-scheduler"
+    networks:
+      - busnet
+    environment:
+      TZ: "Europe/Moscow"
+
+networks:
+    busnet:
+        name: busnet
+        external: true

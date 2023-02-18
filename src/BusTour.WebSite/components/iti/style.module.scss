@@ -1,0 +1,140 @@
+@import "../../styles/global.scss";
+@import "../../styles/mixins.scss";
+
+.page{
+	min-height:100vh;
+	max-width: 1200px;
+	margin: 0 auto;	
+}
+.tour{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-bottom: 23px;	
+}
+.town{
+	font-family: "Helvetica Neue";
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 26px;
+	@include media("<=phone") {
+        font-weight:bold;
+		font-size: 18px;
+		line-height: 26px;
+    }
+}
+.tab{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	font-family: "Helvetica Neue";
+	text-transform: uppercase;
+	margin-bottom: 41px;
+	column-gap: 100px;
+	@include media("<=sm-tablet") {
+        justify-content: space-between;
+    }
+}
+.btn-tab{
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 1px;
+}
+.img {
+	max-width: 100%;
+	display: block;
+	border-radius: 4px;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.5));
+	@include media(">phone") {
+        border: 1px solid #000000;
+		border-radius: 0px;
+    }
+}
+.text{
+	display: flex;
+	justify-content: center;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	margin-top: 24px;
+	margin-bottom: 28px;
+}
+.row{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 24px;
+	align-items: baseline;
+	flex-wrap: wrap;
+}
+.item{
+	font-weight: bold;
+	align-items: center;
+	min-width: 250px;
+	text-transform: uppercase;
+	font-family: "Helvetica Neue";
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 1px;
+	@include media("<=sm-tablet") {
+        width: 100%;
+		margin-bottom: 14px;
+    } 
+}
+.item1{
+	flex-direction: row;
+	flex:1 0 100px;
+	align-items: center;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	@include media("<=sm-tablet") {
+        width: 100%;
+    }
+}
+.timerow{
+	display: flex;
+	margin-bottom: 18px;
+	@include media("<375px") {
+        flex-wrap: wrap;
+    }	
+}
+.time{
+	max-height: 36px;
+	max-width: 77px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 0px;
+	background-color: #f5f5f5;
+	font-size: 18px;
+	line-height: 26px;
+	letter-spacing: 1px;
+	padding: 6px 17px 4px 18px;
+	margin-right: 20px;
+	border-radius: 4px;
+	@include media("<=sm-tablet") {
+        max-width: 74px;
+		margin-right: 11px;
+    }
+	@include media("<375px") {
+        margin-bottom: 11px;
+    }
+}
+.button{
+	display: flex;
+	margin-top: 69px;
+	@include media("<=sm-tablet") {
+		justify-content: center;
+		margin-top: 45px;
+
+		button {
+			width: 217px;
+		}
+    }	
+}

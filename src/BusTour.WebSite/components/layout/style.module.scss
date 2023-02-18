@@ -1,0 +1,12 @@
+@import "/styles/global";
+@import "/styles/overrides";
+
+.layout {
+	flex: 1;
+	padding: 50px 45px;
+
+	@include media("<=phone") {
+		padding: 30px 20px 45px;
+		overflow-x: hidden;
+	}
+}

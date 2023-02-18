@@ -1,0 +1,204 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Configurations>Debug;Release;Stable</Configurations>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\BusRepository\Queries\SelectBus-my.sql" />
+    <None Remove="Repositories\BusRepository\Queries\SelectSeat-my.sql" />
+    <None Remove="Repositories\CommonConfigs\Queries\SelectCommonConfig-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\DeleteGiftCertificateSurprise-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\InsertGiftCertificate-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\InsertGiftCertificateSurprise-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectClient-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectGiftCertificate-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectGiftCertificateAmountVariant-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectGiftCertificateCount-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectGiftCertificateSurprise-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectOrder-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectPayment-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\SelectSurprise-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\UpdateGiftCertificate-my.sql" />
+    <None Remove="Repositories\Orders\Queries\AllGuestHasCome-my.sql" />
+    <None Remove="Repositories\GiftCertificates\Queries\UpsertClient-my.sql" />
+    <None Remove="Repositories\Notifications\Queries\InsertNotification-my.sql" />
+    <None Remove="Repositories\Notifications\Queries\SelectNotification-my.sql" />
+    <None Remove="Repositories\Notifications\Queries\UpdateNotification-my.sql" />
+    <None Remove="Repositories\NumberSequences\Queries\Increment-my.sql" />
+    <None Remove="Repositories\Orders\Queries\DeleteOrderBeverage-my.sql" />
+    <None Remove="Repositories\Orders\Queries\DeleteOrderMenu-my.sql" />
+    <None Remove="Repositories\Orders\Queries\DeleteOrderSeat-my.sql" />
+    <None Remove="Repositories\Orders\Queries\SelectClient-my.sql" />
+    <None Remove="Repositories\Orders\Queries\SelectOrder-my.sql" />
+    <None Remove="Repositories\Orders\Queries\SelectOrderBeverage-my.sql" />
+    <None Remove="Repositories\Orders\Queries\SelectOrderMenu-my.sql" />
+    <None Remove="Repositories\Orders\Queries\SelectOrderSeat-my.sql" />
+    <None Remove="Repositories\Orders\Queries\SelectOrderSurprise-my.sql" />
+    <None Remove="Repositories\Orders\Queries\UpdateOrder-my.sql" />
+    <None Remove="Repositories\Orders\Queries\UpdateOrderBeverage-my.sql" />
+    <None Remove="Repositories\Orders\Queries\UpdateOrderMenu-my.sql" />
+    <None Remove="Repositories\Orders\Queries\UpdateOrderSeat-my.sql" />
+    <None Remove="Repositories\Payments\Queries\InsertPayment-my.sql" />
+    <None Remove="Repositories\Payments\Queries\SelectPayment-my.sql" />
+    <None Remove="Repositories\Payments\Queries\UpdatePayment-my.sql" />
+    <None Remove="Repositories\PromoCodes\Queries\InsertPromoCode-my.sql" />
+    <None Remove="Repositories\PromoCodes\Queries\SelectPromoCode-my.sql" />
+    <None Remove="Repositories\PromoCodes\Queries\SelectPromoCodeGridByFilter-my.sql" />
+    <None Remove="Repositories\PromoCodes\Queries\UpdatePromoCode-my.sql" />
+    <None Remove="Repositories\Tours\Queries\DeleteTour-my.sql" />
+    <None Remove="Repositories\Tours\Queries\DeleteTourBeverages-my.sql" />
+    <None Remove="Repositories\Tours\Queries\DeleteTourMenus-my.sql" />
+    <None Remove="Repositories\Tours\Queries\InsertPrivateHire-my.sql" />
+    <None Remove="Repositories\Tours\Queries\InsertServiceMaintenance-my.sql" />
+    <None Remove="Repositories\Tours\Queries\InsertTour-my.sql" />
+    <None Remove="Repositories\Tours\Queries\InsertTourBeverage-my.sql" />
+    <None Remove="Repositories\Tours\Queries\InsertTourMenu-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectBeverages-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectBus-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectCity-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectPrivateHire-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectPrivateTourInfo-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectRoute-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectServiceMaintenance-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTour-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourBeverage-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourById-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourFB-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourGO-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourMenu-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourNested-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourOrderBeverage-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourOrderExtraBeverage-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourOrderExtraMenu-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourOrderMenu-my.sql" />
+    <None Remove="Repositories\Tours\Queries\SelectTourSeats-my.sql" />
+    <None Remove="Repositories\Tours\Queries\UpdatePrivateHire-my.sql" />
+    <None Remove="Repositories\Tours\Queries\UpdateTour-my.sql" />
+    <None Remove="Repositories\Users\Queries\DeleteUser-my.sql" />
+    <None Remove="Repositories\Users\Queries\InsertUser-my.sql" />
+    <None Remove="Repositories\Users\Queries\SelectUser-my.sql" />
+    <None Remove="Repositories\Users\Queries\UpdateUser-my.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Repositories\BusRepository\Queries\SelectBus-my.sql" />
+    <EmbeddedResource Include="Repositories\BusRepository\Queries\SelectSeat-my.sql" />
+    <EmbeddedResource Include="Repositories\CommonConfigs\Queries\SelectCommonConfig-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\DeleteGiftCertificateSurprise-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectClient-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectGiftCertificateCount-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectOrder-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectPayment-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectGiftCertificateAmountVariant-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectSurprise-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectGiftCertificateSurprise-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\SelectGiftCertificate-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\InsertGiftCertificateSurprise-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\UpdateGiftCertificate-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\InsertGiftCertificate-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\UpdateOrderMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\UpdateOrderBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\AllGuestHasCome-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\UpdateOrderSeat-my.sql" />
+    <EmbeddedResource Include="Repositories\GiftCertificates\Queries\UpsertClient-my.sql" />
+    <EmbeddedResource Include="Repositories\Notifications\Queries\UpdateNotification-my.sql" />
+    <EmbeddedResource Include="Repositories\Notifications\Queries\InsertNotification-my.sql" />
+    <EmbeddedResource Include="Repositories\Notifications\Queries\SelectNotification-my.sql" />
+    <EmbeddedResource Include="Repositories\NumberSequences\Queries\Increment-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\UpdateOrder-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectClient-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\DeleteOrderBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectOrderBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\DeleteOrderMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectOrderMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectOrder-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\DeleteOrderSeat-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectOrderSurprise-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectOrderSeat-my.sql" />
+    <EmbeddedResource Include="Repositories\Payments\Queries\SelectPayment-my.sql" />
+    <EmbeddedResource Include="Repositories\Payments\Queries\UpdatePayment-my.sql" />
+    <EmbeddedResource Include="Repositories\Payments\Queries\InsertPayment-my.sql" />
+    <EmbeddedResource Include="Repositories\PromoCodes\Queries\InsertPromoCode-my.sql" />
+    <EmbeddedResource Include="Repositories\PromoCodes\Queries\SelectPromoCodeGridByFilter-my.sql" />
+    <EmbeddedResource Include="Repositories\PromoCodes\Queries\SelectPromoCode-my.sql" />
+    <EmbeddedResource Include="Repositories\PromoCodes\Queries\UpdatePromoCode-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\DeleteTourBeverages-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\DeleteTour-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\DeleteTourMenus-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\UpdatePrivateHire-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\InsertServiceMaintenance-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\InsertTour-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\InsertTourBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\InsertPrivateHire-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\InsertTourMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectCity-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectBeverages-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectBus-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectServiceMaintenance-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectPrivateHire-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectRoute-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectPrivateTourInfo-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourGO-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourSeats-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourNested-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTour-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourFB-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourOrderExtraBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourOrderBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourOrderExtraMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourOrderMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTourById-my.sql" />
+	<EmbeddedResource Include="Repositories\Tours\Queries\SelectTourGuests-my.sql" />
+	<EmbeddedResource Include="Repositories\Tours\Queries\UpdateServiceMaintenance-my.sql" />
+	<EmbeddedResource Include="Repositories\Tours\Queries\UpdateTour-my.sql" />
+    <EmbeddedResource Include="Repositories\Users\Queries\DeleteUser-my.sql" />
+    <EmbeddedResource Include="Repositories\Users\Queries\InsertUser-my.sql" />
+    <EmbeddedResource Include="Repositories\Users\Queries\SelectUser-my.sql" />
+    <EmbeddedResource Include="Repositories\Users\Queries\UpdateUser-my.sql" />
+    <Resource Include="Repositories\Users\Queries\DeleteUser-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\GetSeatsByTables-my.sql" />
+    <Resource Include="Repositories\Users\Queries\InsertUser-my.sql" />
+    <Resource Include="Repositories\Users\Queries\SelectUser-my.sql" />
+    <Resource Include="Repositories\Users\Queries\UpdateUser-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\UpsertClient-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\InsertOrder-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\InsertOrderBeverage-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\InsertOrderMenu-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\InsertOrderSeat-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\InsertOrderSurprise-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectAllergies-my.sql" />
+    <EmbeddedResource Include="Repositories\Selections\Queries\SelectBusObjectsPositions-my.sql" />
+    <EmbeddedResource Include="Repositories\Languages\Queries\SelectLanguages-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectMenus-my.sql" />
+    <EmbeddedResource Include="Repositories\Orders\Queries\SelectLockedSeats-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectSurprises-my.sql" />
+    <EmbeddedResource Include="Repositories\Selections\Queries\SelectTourInfo-my.sql" />
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectTours-my.sql" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.78" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="3.1.13" />
+    <PackageReference Include="MySql.Data" Version="8.0.21" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="NLog.Web.AspNetCore" Version="4.9.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\otc-infrastructure-core\Sources\Infrastructure\Infrastructure.Common\Infrastructure.Common.csproj" />
+    <ProjectReference Include="..\..\otc-infrastructure-core\Sources\Infrastructure\Infrastructure.Db\Infrastructure.Db.csproj" />
+    <ProjectReference Include="..\..\otc-infrastructure-core\Sources\Infrastructure\Infrastructure.Process\Infrastructure.Process.csproj" />
+    <ProjectReference Include="..\BusTour.Common\BusTour.Common.csproj" />
+    <ProjectReference Include="..\BusTour.Domain\BusTour.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Repositories\Tours\Queries\SelectRouteInfo-my.sql" />
+  </ItemGroup>
+
+</Project>

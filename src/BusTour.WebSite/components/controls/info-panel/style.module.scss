@@ -1,0 +1,129 @@
+@import "/styles/_adaptability";
+
+$bgc-color: #F5F5F5;
+$text-color: #000;
+$bold: 700;
+$font-size: 18;
+$line-height: 26;
+
+$min-columns-count: 1;
+$max-columns-count: 5;
+
+$panel-sizes: (
+	"small": (
+		"mode": "always",
+		"breakpoint": 0,
+		"max": 376,
+		"min": 280
+	), 
+	"middle": (
+		"mode": "min-width",
+		"breakpoint": 700,
+		"max": 548,
+		"min": 454
+	), 
+	"big": (
+		"mode": "min-width",
+		"breakpoint": 770,
+		"max": 776,
+		"min": 776
+	)
+);
+
+%for-bold-text {
+	font: {
+		family: "Muller";
+		weight: $bold;
+		size: rem(16);
+	}
+	line-height: em(24, 16);
+}
+
+%right-align-rules {
+	text-align: right;
+	justify-self: end;
+}
+
+.panel {
+	background-color: $bgc-color;
+	color: $text-color;
+	line-height: em($line-height, $font-size);
+	border-radius: 4px;
+	font: {
+		size: rem($font-size);
+	};
+	padding: 10px;
+	display: grid;
+	grid-template-rows: auto;
+
+	&__default-layout {
+		grid-template: auto / 1fr 1fr;
+	}
+
+	& [data-shift] {
+		padding-left: 7px;
+	}
+
+	& [data-bold] {
+		@extend %for-bold-text;
+	}
+
+	& [data-upper] {
+		text-transform: uppercase;
+	}
+
+	& [data-tac] {
+		text-align: center;
+	}
+
+	@each $name, $sizes in $panel-sizes {
+		&.size-#{$name} {
+			@include adaptive-prop(
+				"width", 
+				map-get($sizes, "min"), 
+				map-get($sizes, "max"), 
+				map-get($sizes, "mode"), 
+				map-get($sizes, "breakpoint")
+			);
+		}
+	}
+
+	@for $cols-number from $min-columns-count through $max-columns-count {
+		&.cols-#{$cols-number} {
+			@if ($cols-number > 2) {
+				& > div {
+					display: grid;
+					grid-template: auto / repeat($cols-number, 1fr);
+					
+					& > *:last-child {
+						@extend %right-align-rules;
+					}
+				}
+			} @else if ($cols-number == 2) {
+				& *:nth-child(#{$cols-number}n) {
+					@extend %right-align-rules;
+				}
+			}
+
+			&.center-non-boundary-columns {
+				@if ($cols-number > 2) {
+					& > div > *:not(:last-child):not(:first-child) {
+						text-align: center;
+					}
+				}
+			}
+
+			&.all-left-bold {
+				@if ($cols-number > 2) { 
+					& > div > *:first-child {
+						@extend %for-bold-text;
+					}
+				} @else {
+					& > *:nth-child(#{$cols-number}n + 1) {
+						@extend %for-bold-text;
+					}
+				}
+			}
+		}
+	}
+}

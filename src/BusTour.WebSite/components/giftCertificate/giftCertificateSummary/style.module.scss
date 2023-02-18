@@ -1,0 +1,17 @@
+@import "@/styles/mixins";
+
+.root {
+
+    .panel {
+        margin-top: units(3);
+        width: 100%;
+    }
+
+    .totalAmount {
+        @include font(mullerBold)
+    }
+    
+    .vatTitle {
+        margin-left: units(1);
+    }
+}

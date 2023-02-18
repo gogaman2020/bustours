@@ -1,0 +1,138 @@
+@import "@/styles/mixins";
+
+.root {
+    h1 {
+        margin-bottom: units(3);
+    }
+    h2 {
+        margin-bottom: units(3);
+    }    
+    .paymentMethods {
+
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+
+        .paymentMethod {
+            margin: units(0) units(0);
+            margin-left: units(3);
+            padding-bottom: units(1);
+            height: units(6);
+            cursor: pointer;
+            max-width: 100%;
+
+            &:first-child {
+                margin: 0;
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &.selected {
+                border-bottom: {
+                    color: black;
+                    width: 2px;
+                    style: solid;
+                }
+            }            
+        }
+    }
+
+    .row {
+        margin-bottom: units(3);
+        width: 100%;
+
+        &.chckbx {
+            margin-bottom: units(1);
+            width: 100%;
+        } 
+    }
+
+    .expiryDateWrapper {
+        display: flex;
+        justify-content: space-between;
+        max-width: units(34);
+
+        @include media('<=phone') {
+            max-width: 100%;
+        }
+
+        & > div {
+            width: 45%;
+
+            @include media('<=phone') {
+                width: 48%;
+            }
+        }
+    }
+
+    .securityCodeWrapper {
+        width: units(15.5);
+
+        @include media('<=phone') {
+            width: 48%;
+        }
+    }
+
+    .mainWrapper {
+        max-width: 390px;
+    }
+
+    .paymentMethodHeader {
+        margin-top: units(5);
+    }
+
+    .separator {
+        border: {
+            style: solid;
+            color: rgba(0, 0, 0, 1);
+            width: 1px;
+        };
+        margin-top: units(5);
+        margin-bottom: units(5);
+        height: 1px;
+    }
+
+    a {
+        color: $anchor-color;
+    }
+
+    .buttons-wrapper {
+        display: flex;
+        column-gap: 20px;
+
+        & > button {
+            flex-grow: 1;
+        } 
+    }
+
+    .sidepanel {
+        position: fixed;
+        right: units(6);
+        top: calc(50px + 96px);
+
+        @include media('<=md-desktop') {
+            top: calc(50px + 75px);
+        }
+
+        @include media('<=md-tablet') {
+            display: none;
+        }
+    }
+
+    .amountToPay {
+        display: none;
+        @include font(mullerBold);
+        margin-top: units(4);
+        width: 100%;
+        margin-bottom: units(6);
+        justify-content: space-between;
+
+        @include media('<=md-tablet') {
+            display: flex;
+        }
+
+
+    }
+}

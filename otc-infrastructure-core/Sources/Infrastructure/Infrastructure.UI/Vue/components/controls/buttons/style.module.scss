@@ -1,0 +1,21 @@
+.button {
+	width: 100%;
+	line-height: 1.44;
+	background-color: transparent;
+	border: 0;
+	padding: 7px 12px;
+	color: white;
+}
+.button:hover {
+	text-decoration: none;
+}
+
+.button_blue {
+	background-color: #337ab7;
+}
+.button_green {
+	background-color: #28a745
+}
+.button_white {
+	background-color: #ffffff
+}

@@ -1,0 +1,126 @@
+@import "./media.module.scss";
+
+.header {
+    position: sticky;
+    top: 0px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    line-height: 28px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffffff;
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    z-index: 10002;
+    padding: 31px 36px 25px 34px;
+    column-gap: min(2vw, 60px);
+    max-height: 94px;
+
+    &_logo {
+        font-weight: 700;
+        font-size: 32px;
+        color: #CFD3DC;
+        letter-spacing: normal;
+        white-space: nowrap;
+    }
+
+    &_burger-menu {
+        display: none;
+
+        &-lang-switcher, &-auth-control {
+            display: none;
+        }
+    }
+
+    &_burger-menu-icon {
+        display: none;
+        align-self: center;
+        position: relative;
+        width: 20px;
+        cursor: pointer;
+        height: 16px;
+        background: linear-gradient(
+            to bottom, 
+            transparent 0 43%, 
+            #fff 44% 56%, 
+            transparent 57% 100%
+        );
+
+        &::after, &::before {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: #fff;
+        }
+
+        &::after {
+            right: 0;
+            top: 0;
+        }
+
+        &::before {
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &_menu-wrapper {
+        display: flex;
+        width: 100%;
+        column-gap: min(2vw, 60px);
+    }
+
+    &_menu {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+
+        &-backdrop {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            z-index: 1;
+        }
+    }
+
+    &_right-menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__button {
+            white-space: nowrap;
+            padding-left: 1.3rem;
+        }
+    }
+
+    &_item {
+        text-transform: uppercase;
+        text-align: center;
+
+        a {
+            cursor: pointer;
+        }
+
+        :global .active-link {
+            font-weight: bold;
+        }
+    }
+}
+
+.d-n {
+    display: none;
+}
+
+.booking-link{
+    color: #000000;
+    border-radius: 4px;
+    padding: 0px;
+    margin-right: 40px;
+}

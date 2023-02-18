@@ -1,0 +1,14 @@
+.actionButtons {
+    display: flex;
+    margin-top: 28px;
+
+    & > button,
+    & > a {
+        margin-right: 16px;
+    }
+
+    & > button:last-child,
+    & > a:last-child {
+        margin-right: 0;
+    }
+} 

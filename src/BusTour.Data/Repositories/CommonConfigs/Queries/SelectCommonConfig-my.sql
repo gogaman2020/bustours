@@ -1,0 +1,1 @@
+﻿select `code`, `value` from `common_config`;

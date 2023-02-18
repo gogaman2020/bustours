@@ -1,0 +1,54 @@
+$control-height: 40px;
+$control-background-color: #f5f5f5;
+$control-padding: 4px;
+$control-min-button-width: 140px;
+$control-padding-hoizontal: 12px;
+$control-border-radius: 4px;
+
+%itemsRow {
+	display: flex;
+	margin-top: 11px;
+	max-width: 100%;
+}
+
+%control-layout {
+    height: $control-height;
+    width: 100%;
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    border-radius: $control-border-radius;
+    padding: 2px $control-padding-hoizontal;
+    display: flex;
+    align-items: center;
+}
+
+%button-black-theme {
+    border-color: #000;
+    color: #fff;
+    background-color: #000;
+}
+
+%button-white-theme {
+    border-color: #000;
+    color: #000;
+    background-color: #fff;
+}
+
+%button-base {
+    border: {
+        width: 1px;
+        style: solid;
+        radius: 4px;
+    }
+
+    padding: 0px 1rem;
+    height: 40px;
+    min-width: $control-min-button-width;
+    text-align: center;
+
+    transition: 
+        background-color .5s ease, 
+        color .5s ease, 
+        border-color .5s ease,
+        fill .5s ease;
+}

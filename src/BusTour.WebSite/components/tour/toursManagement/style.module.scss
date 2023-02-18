@@ -1,0 +1,41 @@
+@import "@/styles/mixins";
+
+.root {
+
+    h1 {
+        margin-bottom: units(3);
+    }
+
+    .filter {
+        .applyButton {
+            margin-top: units(3);
+        }
+
+        .filterRow {
+            display: flex;
+            margin-top: units(3);
+
+            & > div:not(.multiselect) {
+                margin-right: units(2);
+                width: units(26.75);
+
+                &.double {
+                    width: units(53.5);
+                }
+            }
+        }
+    }
+
+    .tours {
+        margin-top: units(4);
+
+        .grid {
+            margin-top: units(0);
+        }
+    }
+
+    .deleteButton {
+        margin-bottom: units(0);
+    }
+    
+}

@@ -1,0 +1,66 @@
+@import "/styles/global";
+@import "/styles/_adaptability";
+@import "/styles/overrides";
+
+.guide {
+	&__image {
+		@include adaptive-prop("height", 300, 500, str-slice(#{ map-get($breakpoints, "phone") }, 1, -3));
+
+		background: {
+			position: center center;
+			size: cover;
+		};
+	}
+
+	&__images {
+		@include adaptive-prop("margin-left", 50, 100, "min-width", str-slice(#{ map-get($breakpoints, "phone") }, 1, -3));
+
+		//padding-top: 16px;
+
+		@include media("<=sm-tablet") {
+			margin-left: 0;
+			display: none;
+		}
+	}
+
+	&__tabs {
+		//margin-top: 30px;
+
+		@include media("<=sm-tablet") {
+			flex-wrap: wrap;
+		}
+
+		@include media("<=sm-tablet") {
+			& [role="tab"] { 
+				text-transform: capitalize;
+				font-family: "Garamond MT W04", serif;
+				font-size: rem(18);
+			}
+		}
+	}
+
+	&__tab {
+		pointer-events: none;
+	}	
+
+	&__tab-active {
+		font-weight: normal;
+	}		
+
+	&__text {
+		font-size: rem(18);
+		line-height: em(26, 18);
+		letter-spacing: em(1);
+		font-family: "Garamond MT W04", serif;
+		white-space: pre-wrap;
+		display: none;
+		text-align: center;
+		margin-bottom: 10px;
+
+		@include media("<=sm-tablet") {
+			display: block;
+		}
+
+		@include adaptive-prop("width", 270, 630, "max-width", 768);
+	}
+}

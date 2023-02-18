@@ -1,0 +1,58 @@
+.custom-smart-file {
+  position: relative;
+  input {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    width: auto;
+  }
+}
+
+.custom-file-input {
+    // display: flex;
+    // align-items: center;
+    font-size: 16px;
+    padding-top: 4px;
+
+    & > label {
+        margin-right: 16px;
+    }
+
+    &__file-list {
+        
+    }
+
+    &__button {
+        display: inline-block;
+        width: auto;
+        padding: 0px;
+    }
+
+    &__label {
+        position: relative;
+        margin: auto;
+        // padding-left: 33px;
+        width: auto;
+        cursor: pointer;
+        padding: 8px 16px;
+    }
+
+    &__file-label {
+        max-width: 340px;
+        position: relative;
+        word-break: break-word;
+    }
+
+    &__file-list {
+        ul {
+            padding-left: 0;
+            margin-top: 8px;
+            margin-bottom: 0
+        }
+
+        li {
+            list-style: none;
+            margin-bottom: 2px;
+        }
+    }
+}

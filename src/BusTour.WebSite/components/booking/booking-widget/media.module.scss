@@ -1,0 +1,51 @@
+@import "/styles/global";
+@import "/styles/overrides";
+
+$breakpoints: map-merge($breakpoints, ("md-phone": 400px));
+
+@include media("<=sm-tablet") {
+	.booking-widget-container {
+		width: 90%;
+	}
+
+	.booking-widget {
+		width: 80%;
+		height: auto;
+		padding: 15px;
+	}
+
+	.container {
+		display: grid;
+		grid-template: 1fr / 15% 55% 1fr;
+		grid-column-gap: 5px;
+
+		& > div {
+			& > select {
+				width: 100%;
+				max-width: 250px;
+			}
+		}
+	}
+}
+
+@include media("<=phone") {
+	.booking-widget {
+		width: 100%;
+	}
+
+	.container {
+		grid-template: auto / 100%;
+		
+		& > [class*="dropdown"] {
+			margin-top: 12px;
+		}		
+	}
+}
+
+@include media("<=phone") {
+	.booking-widget {
+		padding: 10px 10px 17px;
+	}
+
+
+}

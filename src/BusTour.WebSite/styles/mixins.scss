@@ -1,0 +1,219 @@
+@import "global";
+@import "overrides";
+@import "_adaptability";
+@import "fonts";
+@import "_controls";
+@import "_colors";
+
+@mixin adaptive($prop, $min: null, $max: null, $breakpoint: phone, $items: null) {
+	@if ($items) {
+		@each $item in $items {
+			@include adaptive-prop($prop, nth($item, 1), nth($item, 2), "max-width", str-slice(#{map-get($breakpoints, nth($item, 3))}, 1, -3));
+		}	
+	} @else {
+		@include adaptive-prop($prop, $min, $max, "max-width", str-slice(#{map-get($breakpoints, $breakpoint)}, 1, -3));
+	}
+}
+
+@function units($step) {
+	@return rem($step * 8); 
+}
+
+$font-types: (
+	h1, 
+	h2, 
+	subtitle2, 
+	main,
+	subtitle1
+);
+
+@mixin font($font-type) {
+	@if $font-type == h1 {
+		font: { family: "Helvetica Neue"; weight: 500; size: rem(24) }
+		@include adaptive-prop("font-size", 18, 24, "max-width", str-slice(#{map-get($breakpoints, "phone")}, 1, -3));
+		line-height: rem(31);  
+		@include adaptive("letter-spacing", 1, 3);
+		text-transform: uppercase;
+	} @else if $font-type == h2 {
+		font: { family: "Helvetica Neue"; weight: 500; size: rem(18) }
+		line-height: em(27, 18);
+		letter-spacing: em(1, 18);
+		text-transform: uppercase;		
+	} @else if $font-type == subtitle2 {
+		font: { family: "Helvetica Neue"; weight: 500; size: rem(10) }
+		line-height: em(13, 10);  
+		letter-spacing: em(1, 10);
+		text-transform: uppercase;
+	} @else if $font-type == subtitle1 {
+		font: { family: "Helvetica Neue"; weight: 400; size: rem(16) }
+		line-height: em(21, 16);  
+		letter-spacing: em(1, 16);
+		text-transform: uppercase;	
+	} @else if $font-type == subtitle1Bold {
+		font: { family: "Helvetica Neue"; weight: 700; size: rem(16) }
+		line-height: em(21, 16);  
+		letter-spacing: em(1, 16);
+		text-transform: uppercase;			
+	} @else if $font-type == main {
+		font: { family: "Garamond MT W04"; weight: 400; size: rem(18) }
+		line-height: em(26, 18);
+		letter-spacing: em(1, 18);
+	} @else if $font-type == control2 {
+		font: { family: "Helvetica Neue"; weight: 400; size: rem(15) }
+		line-height: em(31, 15);
+		letter-spacing: em(4, 15);		
+	} @else if $font-type == control3 {
+		font: { family: "Helvetica Neue"; weight: 400; size: rem(15) }
+		line-height: em(13, 15);
+		letter-spacing: em(3, 15);	
+	} @else if ($font-type == mullerBold) {
+		font: { family: "Muller"; weight: 700; size: rem(16) }
+		line-height: em(24, 16);
+		letter-spacing: em(1, 16);
+	} @else {
+		font: { family: "Garamond MT W04"; weight: 400; size: rem(18) }
+		line-height: em(26, 18);
+		letter-spacing: em(1, 18);
+	}
+}
+
+//vue-select
+  @mixin dropdown-mobile-font {
+	font-family: 'PTSerif' !important;
+	font-size: 14px !important;
+	font-style: italic;
+  }
+  :global(.vs__dropdown-toggle) {
+	border: none !important;
+	height: $control-height;
+  }
+  
+  :global(.vs__selected-options) {
+	border: none;
+	height: $control-height;
+	padding: 0px;
+	flex-wrap: nowrap;
+	max-width: calc(100% - 40px);
+  }    
+  
+  :global(.v-select) {
+	width: 100%;
+  }
+
+  :global(.vs__selected) {
+	@include font(main);
+	margin: 0px;
+	padding-left: 12px;
+	height: $control-height;
+	//white-space: nowrap;
+	overflow: hidden;
+	//width: 100%;
+	line-height: $control-height;
+
+	:global(div) {
+		height: $control-height;
+	}
+  }
+
+	:global(.ru .vs__selected) {
+		@include media("<phone") {
+			@include dropdown-mobile-font;
+		}
+	}  
+
+  :global(.vs__dropdown-option) {
+	  padding: 3px 12px;
+  }
+
+	:global(.ru .vs__dropdown-option) {
+		@include media("<phone") {
+			@include dropdown-mobile-font;
+		}
+	}    
+  
+  :global(.vs__dropdown-menu) {
+	@include font(main);
+	background: $control-background-color  !important;
+	box-shadow: none  !important;
+	border: none !important;
+	min-width: auto !important;
+  }
+  
+  :global(.vs__dropdown-option--highlight) {
+	background: $control-background-color !important;
+	color: inherit !important;
+	font-weight: 600 !important ;
+  }
+  
+  :global(.vs__actions) {
+	padding-right: 19px !important;
+  }
+  
+//   :global(.vs__open-indicator) {
+// 	fill: rgba(0,0,0,0.87059) !important;
+// 	transform: scale(1.2,1.02) !important;
+//   }
+  
+//   :global(.vs--open .vs__open-indicator) {
+// 	transform: rotate(180deg) scale(1.2,1.02) !important;
+//   }  
+
+  //vue-phone-number-input
+  :global(.country-selector__input) {
+	  border: none !important;
+	  color: black !important;
+	  outline: none;
+	  font: { family: "Garamond MT W04" !important; weight: 400 !important; size: rem(18) !important };
+	  line-height: em(26, 18) !important;
+	  letter-spacing: em(1, 18) !important;
+	  padding-top: 0px !important;
+  }
+  :global(.country-selector__country-flag) {
+	  top: 13px !important;
+  }
+  :global(.country-selector__toggle__arrow path.arrow) {
+    fill: black !important;
+  }
+  :global(.input-tel__input) {
+	border: none !important;
+	color: black !important;
+	outline: none;
+	padding-top: 0px !important;
+	font: { family: "Garamond MT W04" !important; weight: 400 !important; size: rem(18) !important };
+	line-height: em(26, 18) !important;
+	letter-spacing: em(1, 18) !important;
+	}
+	:global(.country-selector__label) {
+		color: black !important;
+		opacity: 1 !important;
+		display: none !important;
+	}
+	:global(.input-tel__label) {
+		color: black !important;
+		opacity: 1 !important;
+		display: none !important;
+	}
+	:global(.country-selector__list) {
+		min-width: 320px !important;
+	}
+	:global(.country-selector__list__item) {
+		color: black !important;
+		opacity: 1 !important;
+		font: { family: "Garamond MT W04" !important; weight: 400 !important; size: rem(18) !important };
+		line-height: em(26, 18) !important;
+		letter-spacing: em(1, 18) !important;
+	}
+	:global(.country-selector__list__item:hover) {
+		background-color: #f5f5f5 !important;
+		font-weight: bold !important;
+	}
+	:global(.country-selector__list__item.selected) {
+		background-color: #f5f5f5 !important;
+		font-weight: bold !important;
+	}	
+	:global(.vue-phone-number-input) {
+		border-radius: $control-border-radius !important;
+	}
+	:global(.vue-phone-number-input .flex-1) {
+		margin-left: units(2);
+	}

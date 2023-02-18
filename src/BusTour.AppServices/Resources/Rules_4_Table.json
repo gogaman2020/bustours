@@ -1,0 +1,74 @@
+{
+	"RuleTypesTwoSeats": [
+		"AlwaysTrue"
+	],
+	"RuleTypesFourSeats": [
+		"GroupTables"
+	],
+	"Rules": [
+		{
+			"RuleTypesTwoSeats": "AlwaysTrue",
+			"RuleTypesFourSeats": "GroupTables",
+			"ActionYesYes": {
+				"Type": "Table4_GroupTables"
+			},
+			"ActionYesNo": {
+				"Type": "OtherOption"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		}
+	],
+	"Debug": {
+		"Code": "4_Table",
+		"Name": "4 посетителя выбрали опцию 'Только отдельный стол'",
+		"RuleTypesTwoSeats": {
+			"AlwaysTrue": {
+				"Text": "",
+				"Color": "black",
+				"Background": "white"
+			}
+		},
+		"RuleTypesFourSeats": {
+			"GroupTables": {
+				"Text": "2 стола в первом ряду или 2 стола в последнем ряду или стол на 4х",
+				"Color": "black",
+				"Background": "#F8CBAD"
+			}
+		},
+		"Actions": [
+			{
+				"Types": [ "Redirect" ],
+				"Text": "",
+				"Description": "Переход к другому правилу",
+				"Color": "black",
+				"Background": "white"
+			},
+			{
+				"Types": [ "Table4_GroupTables" ],
+				"Text": "предложим",
+				"Description": "Доступно - два свободных стола в первом ряду или два свободных стола в последнем ряду или свободный стол на четверых.",
+				"Color": "black",
+				"Background": "#F7CAAC"
+			},
+			{
+				"Types": [ "OtherOption" ],
+				"Text": "",
+				"Description": "Предлагаем выбрать другую опцию или иной день или время",
+				"Color": "black",
+				"Background": "#FF0000"
+			},
+			{
+				"Types": [ "Unavailable" ],
+				"Text": "",
+				"Description": "Недостижимое состояние",
+				"Color": "black",
+				"Background": "#A64D79"
+			}
+		]
+	}
+}

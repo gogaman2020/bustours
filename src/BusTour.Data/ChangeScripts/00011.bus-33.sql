@@ -1,0 +1,28 @@
+DROP PROCEDURE IF EXISTS migration;
+
+DELIMITER $$
+CREATE PROCEDURE migration()
+BEGIN
+	IF NOT EXISTS(SELECT 1
+		FROM INFORMATION_SCHEMA.TABLES
+		WHERE table_name = 'promo_code' and table_schema = DATABASE()
+	) 
+	THEN
+		CREATE TABLE `promo_code` (
+		`id` INTEGER NOT NULL AUTO_INCREMENT,
+		`promo_code_type` INTEGER DEFAULT NULL,
+		`date_start` DATETIME DEFAULT NULL,
+		`date_end` DATETIME DEFAULT NULL,
+		`number_of_promocodes` INTEGER DEFAULT NULL,
+		`amount_of_discount` DECIMAL(19,4) DEFAULT NULL,
+		`type_of_discount` INTEGER DEFAULT NULL,
+		PRIMARY KEY USING BTREE (`id`)
+		) ENGINE=InnoDB
+		AUTO_INCREMENT=1 ROW_FORMAT=DYNAMIC CHARACTER SET 'utf8mb4' COLLATE 'utf8mb4_0900_ai_ci';	
+	END IF;	
+END$$
+DELIMITER ;
+
+CALL migration();
+
+DROP PROCEDURE IF EXISTS migration;

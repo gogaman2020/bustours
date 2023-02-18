@@ -1,0 +1,58 @@
+@import "/styles/global";
+@import "/styles/overrides";
+
+@include media("<=lg-tablet") {
+	.title {
+		font-size: 50px;
+	}
+
+	.sub-title {
+		font-size: 24px;
+	}
+}
+
+@include media("<=md-tablet") {
+	.link-to-photos {
+		bottom: 15px;
+		left: initial;
+		margin: 0 auto;
+	}
+
+	.main {
+		min-width: auto;
+	}
+
+	.booking-widget-container {
+		bottom: 40px;
+		transform: translateX(-50%);
+		margin-left: 0;
+		width: auto;
+	}
+}
+
+@include media("<=sm-tablet") {
+	.booking-widget-container {
+		width: 90%;
+	}
+
+	.title {
+		font-size: 32px;
+	}
+
+	.sub-title {
+		font-size: 18px;
+		letter-spacing: 1px;
+		line-height: 26px;
+	}
+}
+
+@include media("<=phone") {
+	.link-to-photos {
+		display: none;
+	}
+
+	.sub-title-container {
+		align-self: start;
+		margin-top: 80px;
+	}
+}

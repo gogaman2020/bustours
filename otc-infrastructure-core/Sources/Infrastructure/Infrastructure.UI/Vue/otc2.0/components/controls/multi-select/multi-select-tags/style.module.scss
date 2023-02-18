@@ -1,0 +1,26 @@
+.box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.tag {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-right: 6px;
+}
+
+.tagBox {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.showSelector {
+    text-decoration: underline;
+    cursor: pointer;
+    padding-right: 10px;
+}

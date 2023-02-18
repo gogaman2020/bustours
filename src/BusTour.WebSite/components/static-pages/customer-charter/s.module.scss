@@ -1,0 +1,25 @@
+@import "/styles/mixins.scss";
+
+$main-indent: 20px;
+
+.page {
+	&__subtitle {
+		margin-top: 15px;
+		font-size: value-in-range(18, 14, 1920, 320);
+	}
+
+	&__paragraph {
+		text-transform: uppercase;
+		font-family: "Garamond MT W04";
+		font-size: rem(12);
+		line-height: em(24, 12);
+		letter-spacing: em(3, 12);
+
+		&-container {
+			display: grid;
+			grid-template: auto / 1fr;
+			row-gap: $main-indent;
+			margin-top: $main-indent;
+		}
+	}
+}

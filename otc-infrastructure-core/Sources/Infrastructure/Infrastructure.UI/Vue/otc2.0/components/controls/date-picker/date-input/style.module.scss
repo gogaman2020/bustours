@@ -1,0 +1,32 @@
+.box {
+    position: relative;
+}
+
+.iconBox {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.dateValue {
+    box-sizing: border-box;
+    border-radius: 4px !important;
+    border: 0.75px solid #6E7C8D;
+    height: 32px;
+    width: 100%;
+    padding: 0 30px 0 6px;
+    font-size: 16px;
+    font-family: 'IBM Plex Sans', 'Avenir', Helvetica, Arial, sans-serif;
+    outline: none !important;
+
+    &:focus {
+        border: 1.5px solid #6E7C8D;
+    }
+}

@@ -1,0 +1,55 @@
+@import "/styles/mixins";
+
+.page {
+	&__filter {
+		margin-top: 30px;
+	}
+
+	&__grid {
+		margin-top: 30px;
+	}
+
+	&__grid-editor {
+		&, & > div:not(:last-child), & input {
+			background-color: #fff !important;
+		}
+	}
+
+	&__date-editor {
+		& > div:not(:last-child) {
+			height: auto;
+		}
+	}
+
+	&__buttons-wrapper {
+		margin-top: 30px;
+		display: flex;
+		column-gap: 15px;
+	}
+}
+
+.filter {
+	&__city {
+		width: 200px;
+	}
+
+	&__statuses {
+		margin-top: 10px;
+
+		& > div {
+			column-gap: 15px;
+		}
+	}
+
+	&__checkbox {
+		column-gap: 7px;
+
+		& > div:first-child {
+			width: auto;
+		}
+	}
+
+	&__button {
+		margin-top: 30px;
+	}
+}

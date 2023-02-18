@@ -1,0 +1,149 @@
+.chat-new-message {
+    border: 1px solid #ddd;
+    width: 100%!important;
+    margin-top: 0;
+    background-color: #fff!important
+}
+
+.chat-new-message .form-control:focus {
+    border: 1px solid #4b8df9!important
+}
+
+.chat-new-message-back {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #e9eff3;
+    overflow: hidden;
+    clear: both;
+}
+
+.chats {
+    min-height: 2em;
+    margin: -15px 0 0;
+}
+
+.chats li {
+    list-style: none;
+    padding: 5px 0;
+    margin: 10px auto;
+    font-size: 12px;
+}
+
+.chats li .message {
+    margin-right: 65px;
+    background: #fafafa;
+}
+
+.chats li .my-message {
+    background: #e0ebf9;
+}
+
+.chat-control-panel {
+    padding-top: 5px;
+}
+
+.chat-body {
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+#chats.portlet > .portlet-title:after {
+    clear: none;
+}
+
+#chats.portlet > .portlet-body {
+    clear: none;
+}
+
+.chats li.chat-message-inbox {
+    padding-left: 40%;
+}
+
+.chats li.chat-message-outbox {
+    padding-right: 40%;
+}
+
+.message-divider-left {
+    border-left: 3px solid #94A0B2;
+}
+
+.message-divider-right {
+    border-right: 3px solid #94A0B2;
+}
+
+@media (max-width: 767px) {
+    .chats li.chat-message-inbox {
+        padding-left: 15%;
+    }
+
+    .chats li.chat-message-outbox {
+        padding-right: 15%;
+    }
+
+    .chats li .my-message {
+        margin-left: 0;
+    }
+
+    .chats li .message {
+        margin-right: 0;
+    }
+
+    .text-xs-left {
+        text-align: left;
+    }
+
+    .message-divider-left {
+        border-left: none;
+    }
+
+    .message-divider-right {
+        border-right: none;
+    }
+
+    .chat-message__border-xs-bottom {
+        border-bottom: 1px solid black;
+        padding-left: 10px;
+        padding-top: 5px;
+        margin-bottom: 10px;
+    }
+}
+
+@media (min-width: 768px) {    
+    .chats li.chat-message-inbox {
+        padding-left: 20%;
+    }
+
+    .chats li.chat-message-outbox {
+        padding-right: 20%;
+    }
+}
+
+@media (min-width: 1024px) {    
+    .chats li.chat-message-inbox {
+        padding-left: 30%;
+    }
+
+    .chats li.chat-message-outbox {
+        padding-right: 30%;
+    }
+}
+
+@media (min-width: 1280px) {    
+    .chats li.chat-message-inbox {
+        padding-left: 35%;
+    }
+
+    .chats li.chat-message-outbox {
+        padding-right: 35%;
+    }
+}
+
+@media (min-width: 1440px) {    
+    .chats li.chat-message-inbox {
+        padding-left: 40%;
+    }
+
+    .chats li.chat-message-outbox {
+        padding-right: 40%;
+    }
+}

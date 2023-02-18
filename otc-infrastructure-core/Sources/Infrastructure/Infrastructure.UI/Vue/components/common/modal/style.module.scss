@@ -1,0 +1,119 @@
+@import "../../../Styles/variables";
+@import "../../../Styles/_helpers/all";
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 90800;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+  background-color: rgba(255,255,255,0.25);
+  font-family: 'IBM Plex Sans',sans-serif;
+  &__wrapper {
+    width: auto;
+    flex-grow: 1;
+    position: relative;
+    max-height: calc(100vh - 55px);
+    overflow-y: auto; 
+    background-color: white;
+    border-radius: 3px !important;
+    padding: 0px $mod * 2 $mod * 2;
+    border: 1px solid #888;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__header {
+    position: sticky;
+    top: 0;
+    background-color: rgb(255, 255, 255);
+    z-index: 3;
+    padding-top: 5px;
+  
+    h4 {
+      font-size: 32px;
+      color: black;
+      line-height: 32px;
+    }
+    p {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+  &__content {
+    p {
+      color: #202020 !important;
+      margin: 0;
+      margin-bottom: 16px;
+      font-size: 16px;
+    }
+  }
+  &__actions {
+    display: flex;
+  }
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: $mod * 1;
+    color: #aaa;
+    font-size: 28px !important;
+    cursor: pointer;
+    &:hover, &:focus {
+      color: #555;
+      text-decoration: none;
+    }
+  }
+}
+.modal_mid2 {
+  .modal {
+    &__wrapper {
+      max-width: 720px!important;
+    }
+  }  
+}
+
+.modal_mid {
+  .modal {
+    &__wrapper {
+      max-width: 640px!important;
+    }
+  }  
+}
+
+.modal_sm {
+  .modal{
+    &__wrapper {
+      max-width: 515px!important;
+    }
+  }
+}
+
+.modal_l {
+  .modal{
+    &__wrapper {
+      max-width: 1100px!important;
+    }
+  }
+}
+
+.modal_xl {
+  padding: 0 20px;
+  .modal{
+    &__wrapper {
+      max-width: 1430px;
+    }
+  }
+  //media stack
+    @include rmax(468) {
+      //
+    }
+    @include md {
+      //
+    }
+    @include lg {
+      padding: 0;
+    }
+}

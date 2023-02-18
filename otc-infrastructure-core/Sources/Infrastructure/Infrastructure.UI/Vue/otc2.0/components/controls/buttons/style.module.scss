@@ -1,0 +1,85 @@
+@import "../../../Styles/variables";
+
+.button	{
+	display: block;
+	max-width: 100%;
+	overflow: hidden;
+	vertical-align: middle;
+	border-radius: $br-4;
+	border-bottom-right-radius: $br-20;
+	transition: all .15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.button {
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none !important;
+}
+
+//lg
+.button_lg {
+	padding: 16px 16px;
+}
+//mid
+.button_mid {
+	padding: 9px
+}
+//sm
+.button_sm {
+	padding: 5px
+}
+
+//red
+	.button_red,
+	.button_red.button_disabled:focus,
+	.button_red.button_disabled:hover  {
+		color: white !important;
+		background-color: $color-main-red
+	}
+
+//white
+	.button_white,
+	.button_white.button_disabled:focus,
+	.button_white.button_disabled:focus {
+		color: $color-dark-text !important;
+		background-color: white;
+	}
+
+//transparent
+	.button_transparent,
+	.button_transparent.button_disabled:focus,
+	.button_transparent.button_disabled:hover {
+		color: $color-dark-text !important;
+		background-color: transparent;
+		border: 1px $color-dark-text solid;
+	}
+
+//grey
+	.button_grey,
+	.button_grey.button_disabled:focus,
+	.button_grey.button_disabled:hover {
+		color: white !important;
+		background-color: $color-bg-ac-default;
+	}
+
+
+//mix
+.button_red:focus, .button_red:hover, 
+.button_grey:focus, .button_grey:hover, 
+.button_white:focus, .button_white:hover,
+.button_transparent:focus, .button_transparent:hover {
+	color: white !important;
+	background-color: $color-main-red-hover;
+}
+.button_white:focus, .button_red:focus, .button_grey:focus {
+	box-shadow: 0 0 0 1px $color-main-red-rgba-50;
+}
+.button_transparent:focus, .button_transparent:hover {
+	border-color: transparent !important;
+}
+
+//disabled
+	.button_disabled, .button_disabled:focus {
+		opacity: .5;
+		box-shadow: none;
+	}

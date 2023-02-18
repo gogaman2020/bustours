@@ -1,0 +1,24 @@
+.error {
+    input {
+        border-color: #f79483;
+        background: #fdd;
+    }
+
+    div[role="input"] {
+        border-color: #f79483;
+        background-color: #fdd;
+    }
+
+    span[role="combobox"] {
+        border-color: #f79483;
+    }
+}
+
+.error-label {
+    color: #dc3545;
+    font-size: 12px;
+}
+
+.error-border {
+    border-color: #f79483;
+}

@@ -1,0 +1,17 @@
+export const ObjectType = Object.freeze({ 
+    "PurchasePlans": 0,
+    "Procedures": 1,
+    "Agreement": 2,
+    "RequestForPurchase": 3,
+    "NotificationAndDocumentation": 4,
+    "SchedulePlans": 56,
+    "FinancialObject": 57,
+    "Procedures44Fz": 58,
+    "SupplyPlan": 59,
+    "RequirementSpecification": 60,
+    "NmckExpertise": 61,
+    "ReconcileWithdraw": 62,
+    "ReconcileWithdrawProcedure": 63,
+    "Request": 64,
+    "Contract": 65,
+});

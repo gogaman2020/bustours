@@ -1,0 +1,119 @@
+@import "/styles/mixins.scss";
+.container {
+    margin: 20px 0;
+    width: 100%;
+}
+.checkbox{
+    span {
+        border: 1px #c9c9c9 solid;
+
+        &:hover   {
+            background-color: #c9c9c9;
+        }
+    }
+}
+.title {
+    &_control {
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 31px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+
+        color: #000000;
+    }
+}
+
+.list {
+    &_row {
+        margin: 8px 0;
+        display: flex;
+        justify-content: space-between;
+        width: calc(454px + 200 * ((100vw - 700px) / 1220));
+        
+        @media (max-width: 576px) {
+            width: 454px;
+        }
+        .allGuestHasCome {
+            margin-top: 18px;
+        }
+    }
+
+    &_item {
+        font-family: "Garamond MT W04";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 26px;
+        width: 33%;
+        margin-right: 20px;
+        label {
+            font-family: "Helvetica Neue";
+            font-weight: bold;
+        }
+        &:first-child {
+            min-width: 150px;
+        }
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+.tables {
+    margin-top: 25px;
+    display: flex;
+}
+
+.guest {
+    &_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 1300px;
+        & > div {
+            margin-bottom: 20px;
+        }
+        & > div:nth-child(odd) {
+            margin-right: 20px;
+        }
+    }
+    &_panel {
+        margin-bottom: 14px;
+        // margin-right: 20px;
+    }
+    &_number {
+        font-family: Muller;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
+        color: #000000;
+        margin-bottom: 3px;
+    }
+}
+
+
+.part-bus{
+    position: relative;
+
+    margin-top: 16px;
+    @include media("<phone") {
+        display: flex;
+        justify-content: center;
+    }
+    
+
+    &_position{
+        zoom: 2;
+        position: relative;
+        display: inline-block;
+        margin: 0px 16px 16px 0px;
+    }
+}
+
+.allergy-panel {
+    border: 1px solid $error-color;
+}

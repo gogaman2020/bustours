@@ -1,0 +1,46 @@
+.input {
+	display: block;
+	max-width: none;
+	&__field {
+		position: relative;
+	}
+	&__errors {
+		span {
+			display: block;
+			color: #dc3545;
+			font-size: 12px;
+		}
+	}
+	&__suggestion {
+		width: 100%;
+		position: absolute;
+		z-index: 2019;
+		
+	}
+}
+
+.suggestion {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+	border: 1px grey solid;
+	max-height: 225px;
+	overflow-y: auto;
+	&__list-item {
+		list-style: none;
+		padding: 8px;
+		margin-bottom: 0;
+		&:hover, &:focus {
+			background-color: #e5e5e5;
+			cursor: pointer;
+			outline: none;
+		}
+	}
+	p {
+		margin: 0;
+	}
+}
+
+.input_error, .input_error:focus {
+	border: 1px #dc3545 solid;
+}

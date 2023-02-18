@@ -1,0 +1,20 @@
+.select-list {
+	li {
+		font-size: 16px;
+		color: #202020;
+		margin-left: -4px;
+		margin-right: -4px;
+		padding: 3px 0;
+		padding-left: 4px;
+
+	}
+	li:hover {
+		background-color: #e2e5e8;
+	}
+	li:last-child {
+		margin-bottom: 0;
+	}
+	&__check {
+		margin-right: 6px;
+	}
+}

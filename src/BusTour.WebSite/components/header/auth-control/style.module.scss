@@ -1,0 +1,26 @@
+.logout {
+	align-items: baseline;
+	white-space: nowrap;
+	line-height: 1em;
+
+	& img {
+		margin-right: 15px;
+	}
+
+	& > button {
+		text-transform: inherit;
+	}
+
+	&-block {
+		display: flex;
+		flex-direction: column;
+		
+		&, & .user-role {
+			display: flex;
+			text-transform: uppercase;
+			justify-content: flex-end;
+		}
+	}
+}
+
+@import "./media.module";

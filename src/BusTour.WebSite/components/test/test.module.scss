@@ -1,0 +1,53 @@
+.test-table-group-top {
+    color: grey;
+    display: flex;
+}
+
+.test-table-group-bottom {
+    color: grey;
+    display: flex;
+    align-items: flex-end;
+}
+
+.test-table2 {
+    border: 2px solid gray;
+    width: 50px;
+    height: 30px;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.test-table4 {
+    border: 2px solid gray;
+    width: 50px;
+    height: 66px;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.test-seat {
+    border: 2px solid gray;
+    width: 30px;
+    height: 30px;
+    margin: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.test-seat-locked {
+    background-color: darkgray;
+}
+
+.test-seat-selected {
+    background-color: greenyellow;
+}
+
+.test-seat-recommended {
+    background-color: rgb(247, 236, 137);
+}
+
+.test-seat-not-available {
+    background-color: #aadbfb;
+}

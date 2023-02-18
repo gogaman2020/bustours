@@ -1,0 +1,86 @@
+@import "../../../Styles/variables";
+@import "../../../Styles/_helpers/all";
+
+// ---- check ----
+	.check {
+		font-size: 16px;
+		position: relative;
+		padding-left: 1.7em;
+		margin-bottom: 0;
+		&__input {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			overflow: hidden;
+			clip: rect(0 0 0 0);
+		}
+			/*disabled*/
+			&__input:disabled + &__box {
+				box-shadow: 0 0 0 .1em #9B9B9B;
+			}
+			&__input:checked:disabled + &__box {
+				background-color: #9B9B9B;
+			}
+
+		&__box {
+			position: absolute;
+			width: 1em;
+			height: 1em;
+			border-radius: .05em !important;
+			margin-top: .2em;
+			margin-left: -1.5em;
+		    background-position: center -1px;
+			box-shadow: 0 0 0 .15em #6E7C8D;
+			background-repeat: no-repeat;
+			background-color: white;
+		}
+		&__box_indeterminate {
+			background-image: url("data:image/svg+xml,%3Csvg width='8' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%236E7C8D' d='M0 0h8v8H0z'/%3E%3C/svg%3E");
+			background-position: center;
+		}
+		&__label {
+			margin-left: 10px;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+		/*chcked*/
+		&__input:checked + &__box {
+			background-color: #6E7C8D;
+			background-image: url("data:image/svg+xml,%3Csvg width='16' height='15' viewBox='0 0 16 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.04004 8.84766L6.64664 12.4543L12.9603 6.14055' stroke='%23ffffff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+		}
+		/*focused*/
+		&__input:focus + &__box {
+			box-shadow: 0 0 0 .15em #6E7C8D,
+						0 0 0 .15em #4A90E2; //заменить на переменную
+		}
+		//media stack
+		@include rmax(468) {
+			//
+		}
+		@include md {
+			//
+		}
+		@include lg {
+			//
+		}
+	}
+
+
+// ---- checkbox-label ----
+	.checkbox-label {
+		&__text {
+			font-size: 16px;
+			color: #202020;
+			margin-left: 6px;
+		}
+		//media stack
+		@include rmax(468) {
+			//
+		}
+		@include md {
+			//
+		}
+		@include lg {
+			//
+		}
+	}

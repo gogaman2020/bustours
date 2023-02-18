@@ -1,0 +1,80 @@
+// Стандатрный размер шрифта браузера
+$browser-default-font-size: 16;
+
+// Функции конвертации
+
+// Преобразует значение в пикселях в проценты относительно родительского свойства
+// $pixelsValue 			 - Значение свойства в пикселях
+// $parentRelativePropValue  - Значение родительского свойства в пикселях, относительно которого считаются проценты
+// Возвращает значение в процентах
+@function percents($value, $parent-relative-prop-value) {
+	$percents: ($value / $parent-relative-prop-value) * 100%;
+
+	@return $percents;
+}
+
+// Преобразует значение в пикселях в em
+// $px - Значение свойства в пикселях
+// $ctx - Значение шрифта контекста (родительского элемента)
+// Возвращает значение в em
+@function em($px, $ctx: $browser-default-font-size) {
+	@return #{$px / $ctx}em;
+}
+
+// Преобразует значение в пикселях в rem
+// $px - Значение свойства в пикселях
+// Возвращает значение в rem
+@function rem($px) {
+	@return #{$px / $browser-default-font-size}rem;
+}
+
+// Функции адаптивности
+
+// Возвращает значение для CSS-свойства, которое будет изменяться от $max до $min в диапазоне экрана от $from до $to
+// Параметры:
+//     $min  [Number] - минимальное принимаемое свойством значение 
+//     $max  [Number] - максимальное принимаемое свойством значение
+//     $from [Number] - верхняя граница диапазона апаптивности свойства
+//     $to	 [Number] - нижняя граница диапазона апаптивности свойства
+// Единицы измерения переданных значений подразумеваются в пикселях, указывать их не нужно 
+@function value-in-range($max, $min, $from, $to) {
+	@return clamp(#{$min}px, calc(#{$min}px + #{$max - $min} * ((100vw - #{$to}px) / #{$from - $to})), #{$max}px);
+}
+
+// Миксины
+
+// Максимальный размер экрана
+$max-default-screen-size: 1920;
+$min-default-screen-size: 320;
+
+// Режимы адаптивного свойства
+// always 		- пропорционально изменяет размер в диапазоне от $max-screen-size до $min-screen-size
+// min-width 	- пропорционально изменяет размер до определенного break-point
+// max-width	- пропорционально изменяет размер, начиная с определенного break-point  
+$adaptive-modes: ("always": 1, "min-width": 2, "max-width": 3);
+
+// Миксин, генерирующий адаптивное значение свойства в заданном диапазоне, зависящее от текущей ширины (vw)
+// $prop [String] - Название css-свойства
+// $min [Number]  - Минимальное значение диапазона
+// $max [Number]  - Максимальное значение диапазона
+// $mode [$adaptive-modes] - Режим начала действия адаптивности значения свойства
+@mixin adaptive-prop($prop, $min, $max, $mode, $break-point: 0, $max-screen-size: $max-default-screen-size, $min-screen-size: $min-default-screen-size) {
+	$diff-size: $max - $min;
+	$mode-value: map-get($adaptive-modes, $mode);
+
+	@if $mode-value == map-get($adaptive-modes, "max-width") {
+		#{$prop}: $max + px;
+
+		@media (max-width: #{$break-point + px}) {
+			#{$prop}: calc(#{$min + px} + #{$diff-size} * ((100vw - #{$min-screen-size}px) / #{$break-point -$min-screen-size}));
+		}
+	} @else if $mode-value == map-get($adaptive-modes, "min-width") {
+		#{$prop}: $min + px;
+
+		@media (min-width: #{$break-point + px}) {
+			#{$prop}: calc(#{$min + px} + #{$diff-size} * ((100vw - #{$break-point}px) / #{$max-screen-size - $break-point}));
+		}
+	} @else {
+		#{$prop}: calc(#{$min + px} + #{$diff-size} * ((100vw - #{$min-screen-size}px) / #{$max-screen-size - $min-screen-size}));
+	}
+}

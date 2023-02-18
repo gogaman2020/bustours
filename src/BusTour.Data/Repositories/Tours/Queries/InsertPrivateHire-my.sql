@@ -1,0 +1,26 @@
+﻿INSERT INTO tour_private_hire
+(
+	tour_id,
+	duration,
+	block_booking_date_from,
+	block_booking_date_to,
+	block_booking_for_draft,
+	departure_point,
+	arrival_point,
+	stops,
+	price,
+	guest_count
+)
+VALUES
+(
+	@TourId,
+	@Duration,
+	@BlockBookingDateFrom,
+	@BlockBookingDateTo,
+	@BlockBookingForDraft,
+	@DeparturePoint,
+	@ArrivalPoint,
+	@Stops,
+	@Price,
+	@GuestCount
+);

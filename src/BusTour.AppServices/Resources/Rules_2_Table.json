@@ -1,0 +1,173 @@
+{
+	"RuleTypesTwoSeats": [
+		"FreeTable"
+	],
+	"RuleTypesFourSeats": [
+		"TwoFreeSeats",
+		"ThreeFreeSeats",
+		"MoreFreeTable",
+		"FreeTable"
+	],
+	"Rules": [
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "TwoFreeSeats",
+			"ActionYesYes": {
+				"Type": "Seat2of4_Table2"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "ThreeFreeSeats"
+			},
+			"ActionNoYes": {
+				"Type": "Seat2of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "ThreeFreeSeats"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "ThreeFreeSeats",
+			"ActionYesYes": {
+				"Type": "Seat3of4_Table2"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "MoreFreeTable"
+			},
+			"ActionNoYes": {
+				"Type": "Seat3of4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "MoreFreeTable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "MoreFreeTable",
+			"ActionYesYes": {
+				"Type": "Table2and4"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "FreeTable"
+			},
+			"ActionNoYes": {
+				"Type": "Table4"
+			},
+			"ActionNoNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "FreeTable",
+				"RedirectRuleTypesFourSeats": "FreeTable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "FreeTable",
+			"RuleTypesFourSeats": "FreeTable",
+			"ActionYesYes": {
+				"Type": "Table2and4"
+			},
+			"ActionYesNo": {
+				"Type": "Table2"
+			},
+			"ActionNoYes": {
+				"Type": "Table4"
+			},
+			"ActionNoNo": {
+				"Type": "OtherOption"
+			}
+		}
+	],
+	"Debug": {
+		"Code": "2_Table",
+		"Name": "2 посетителя выбрали опцию 'Только отдельный стол'",
+		"RuleTypesTwoSeats": {
+			"FreeTable": {
+				"Text": "есть свободные 2х местные столы",
+				"Color": "black",
+				"Background": "#4472C4"
+			}
+		},
+		"RuleTypesFourSeats": {
+			"TwoFreeSeats": {
+				"Text": "есть 2 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			},
+			"ThreeFreeSeats": {
+				"Text": "есть 3 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			},
+			"MoreFreeTable": {
+				"Text": "еще свободный стол на 4х",
+				"Color": "white",
+				"Background": "#548235"
+			},
+			"FreeTable": {
+				"Text": "есть 1 свободный стол на 4х",
+				"Color": "black",
+				"Background": "#A8D08D"
+			}
+		},
+		"Actions": [
+			{
+				"Types": [ "Redirect" ],
+				"Text": "",
+				"Description": "Переход к другому правилу",
+				"Color": "black",
+				"Background": "white"
+			},
+			{
+				"Types": [ "Seat2of4", "Seat3of4" ],
+				"Text": "предложим",
+				"Description": "Доступно - места за 4х местным столом. Рекомендуемое - места за 4х местным столом.",
+				"Color": "black",
+				"Background": "#FFFF00"
+			},
+			{
+				"Types": [ "Seat2of4_Table2", "Seat3of4_Table2" ],
+				"Text": "предложим",
+				"Description": "Доступно - столы на 2х и места за 4х местным столом. Рекомендуемое - стол на 2х (не VIP).",
+				"Color": "black",
+				"Background": "#00B0F0"
+			},
+			{
+				"Types": [ "Table2" ],
+				"Text": "предложим",
+				"Description": "Доступно - столы на 2х. Рекомендуемое - стол на 2х (не VIP).",
+				"Color": "black",
+				"Background": "#4472C4"
+			},
+			{
+				"Types": [ "Table4" ],
+				"Text": "предложим",
+				"Description": "Доступно - столы на 4х. Рекомендуемое - стол на 4х.",
+				"Color": "white",
+				"Background": "#385623"
+			},
+			{
+				"Types": [ "Table2and4" ],
+				"Text": "предложим",
+				"Description": "Доступно - столы на 2х и 4х. Рекомендуемое - стол на 2х (не VIP), стол на 2х (VIP), стол на 4х.",
+				"Color": "black",
+				"Background": "#C5E0B3"
+			},
+			{
+				"Types": [ "OtherOption" ],
+				"Text": "",
+				"Description": "Предлагаем выбрать другую опцию или иной день или время",
+				"Color": "black",
+				"Background": "#FF0000"
+			}
+		]
+	}
+}

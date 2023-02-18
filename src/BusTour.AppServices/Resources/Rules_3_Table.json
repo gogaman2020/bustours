@@ -1,0 +1,105 @@
+{
+	"RuleTypesTwoSeats": [
+		"AlwaysTrue"
+	],
+	"RuleTypesFourSeats": [
+		"GroupTables",
+		"ThreeFreeSeats"
+	],
+	"Rules": [
+		{
+			"RuleTypesTwoSeats": "AlwaysTrue",
+			"RuleTypesFourSeats": "GroupTables",
+			"ActionYesYes": {
+				"Type": "Table4_GroupTables"
+			},
+			"ActionYesNo": {
+				"Type": "Redirect",
+				"RedirectRuleTypesTwoSeats": "AlwaysTrue",
+				"RedirectRuleTypesFourSeats": "ThreeFreeSeats"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		},
+		{
+			"RuleTypesTwoSeats": "AlwaysTrue",
+			"RuleTypesFourSeats": "ThreeFreeSeats",
+			"ActionYesYes": {
+				"Type": "Seat3of4"
+			},
+			"ActionYesNo": {
+				"Type": "OtherOption"
+			},
+			"ActionNoYes": {
+				"Type": "Unavailable"
+			},
+			"ActionNoNo": {
+				"Type": "Unavailable"
+			}
+		}
+	],
+	"Debug": {
+		"Code": "3_Table",
+		"Name": "3 посетителя выбрали опцию 'Только отдельный стол'",
+		"RuleTypesTwoSeats": {
+			"AlwaysTrue": {
+				"Text": "",
+				"Color": "black",
+				"Background": "white"
+			}
+		},
+		"RuleTypesFourSeats": {
+			"GroupTables": {
+				"Text": "2 стола в первом ряду или 2 стола в последнем ряду или стол на 4х",
+				"Color": "black",
+				"Background": "#F8CBAD"
+			},
+			"ThreeFreeSeats": {
+				"Text": "есть 3 места за столом на 4х",
+				"Color": "black",
+				"Background": "#C6E0B4"
+			}
+		},
+		"Actions": [
+			{
+				"Types": [ "Redirect" ],
+				"Text": "",
+				"Description": "Переход к другому правилу",
+				"Color": "black",
+				"Background": "white"
+			},
+			{
+				"Types": [ "Table4_GroupTables" ],
+				"Text": "предложим",
+				"Description": "Доступно - два свободных стола в первом ряду или два свободных стола в последнем ряду или свободный стол на четверых.",
+				"Color": "black",
+				"Background": "#F7CAAC"
+			},
+			{
+				"Types": [ "Seat3of4" ],
+				"Text": "предложим",
+				"Description": "Доступно - места за 4х местным столом. Рекомендуемое - места за 4х местным столом.",
+				"Color": "black",
+				"Background": "#C5E0B3"
+			},
+			{
+				"Types": [ "OtherOption" ],
+				"Text": "",
+				"Description": "Предлагаем выбрать другую опцию или иной день или время",
+				"Color": "black",
+				"Background": "#FF0000"
+			},
+			{
+				"Types": [ "Unavailable" ],
+				"Text": "",
+				"Description": "Недостижимое состояние",
+				"Color": "black",
+				"Background": "#A64D79"
+			}
+		]
+	}
+}

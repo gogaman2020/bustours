@@ -1,0 +1,116 @@
+@import "/styles/mixins.scss";
+
+.masonry {
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	margin: 0 auto;
+	gap: 10px;
+	max-width: 1600px;
+
+	&__item {
+
+		flex: 1 0 auto;
+
+		img {
+			object-fit: cover;
+			object-position: left top;
+			width: 100%;
+			height: 100%;
+		}
+
+		@include media("<=phone") {
+			&, & > img {
+				width: 100% !important;
+				border-radius: 4px;
+			}
+		}
+	}
+
+	@include media("<=phone") {
+		max-height: none;
+	}
+
+	// bus
+	&.bus {
+	
+		.masonry__item {
+
+			height:350px;
+
+			img {
+				object-position: center top;
+			}						
+
+			@include media("<=1000px") {
+				height: auto;
+			}			
+
+			&:nth-child(1), &:nth-child(2), &:nth-child(3) {
+				width: 30%;
+				
+				@include media("<=1000px") {
+					width: 100%;
+
+					img {
+						object-fit: contain;
+						width: 100%;
+						height: auto;
+						object-position: center center;
+					}					
+				}				
+
+			}
+		}
+	}	
+
+	// menu
+	$widths: (
+		1: 25%, 2: 50%, 3: 15%,
+		4: 40%, 5: 20%, 6: 30%,
+		7: 30%, 8: 20%, 9: 40%,
+		10: 20%, 11: 50%, 12: 20%,				
+	);
+
+	&.menu {
+		.masonry__item
+		{
+			height:350px;
+
+			img {
+				object-fit: cover;
+				object-position: center center;
+				width: 100%;
+				height: 100%;
+			}		
+			
+			@each $number, $value in $widths {
+				&:nth-child(#{$number}) {
+					width: #{$value};
+				}
+			}			
+
+			&:nth-child(1) {
+				img {
+					object-position: center right;
+				}
+			}	
+			
+			@include media("<=1200px") {
+				width: 45% !important;
+			}			
+
+			@include media("<=800px") {
+
+				height: auto;
+				width: 100% !important;
+
+				img {
+					height:auto;
+					object-fit: contain;
+				}					
+			}			
+		}
+	}	
+}
+

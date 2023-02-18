@@ -1,0 +1,23 @@
+@import "/styles/mixins.scss";
+
+$main-indent: 20px;
+
+.page {
+	h1 {
+		margin-bottom: units(5);
+	}
+	.row {
+		margin-bottom: units(3);
+        max-width: 400px;
+		
+		&__Textarea {
+			margin-bottom: units(3);
+			width: 100%;
+		}
+	}
+
+	.success {
+		margin: 1em 0em;
+		color: $success-color;
+	}
+}

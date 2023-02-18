@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  bus_site:
+    image: bus_stable_site:${TAG}
+    hostname: "bus-stable-site"
+    networks:
+      - busnet
+    environment:
+      TZ: "Europe/Moscow"
+
+networks:
+    busnet:
+        name: busnet
+        external: true

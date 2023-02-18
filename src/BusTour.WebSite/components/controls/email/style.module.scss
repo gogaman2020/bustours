@@ -1,0 +1,49 @@
+@import "@/styles/mixins";
+
+.root {
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+    input {
+        @extend %control-layout;
+        @include font(main);
+        padding: units(1);
+    }
+
+    &.uppercase {
+
+        text-transform: uppercase;
+
+        input {
+            text-transform: uppercase;
+            @include font(control2);
+        }
+        .viewspan {
+            text-transform: uppercase;
+        }        
+    }
+
+    &.view {
+        input {
+            background: white;
+        }
+    }    
+
+    img {
+        width: units(2);
+        height: units(2);
+        margin-left: units(1);
+        align-items: center;
+    }
+
+    .viewspan {
+        width: auto;
+        @include font(control2);
+        @extend %control-layout; 
+        line-height: $control-height;
+        padding: units(0);
+        background: inherit;
+    }
+}

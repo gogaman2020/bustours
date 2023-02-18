@@ -1,0 +1,92 @@
+@import "../../../styles/global.scss";
+
+.footer {
+    font-family: "Helvetica Neue";
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    background-color: #000000;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &_block {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 18px 6px;
+    }
+
+    &_block:first-child{
+        padding-left: 42px;
+    }
+    
+    &_block:last-child{
+        padding-right: 42px;
+    }
+
+    &_item {
+        text-transform: uppercase;
+        text-align: left;
+        position: relative;
+        padding: 6px;
+
+        a {
+            cursor: pointer;
+            display: inline-block;
+            width: 100%;
+        }
+    }
+
+    &--private {
+        height: 40px;
+        background-color: #000;
+    }
+
+    // MEDIA
+
+    @include media("<=phone") {
+        &_block {
+        }
+    }
+
+    @include media(">=phone", "<tablet") {
+        justify-content: flex-start;
+        flex-direction: column;
+        &_block {
+            padding: 0 20px;
+        }
+
+        &_block:first-child{
+            padding: 16px 0 0 20px;
+        }
+        
+        &_block:last-child{
+            padding: 0 0 16px 20px;
+        }
+    }
+
+    @include media(">tablet", "<desktop") {
+        &_block:first-child{
+            padding-left: 26px;
+        }
+        
+        &_block:last-child{
+            padding-right: 26px;
+        }
+
+    }
+
+    @include media(">=desktop") {
+        &_block {
+        }
+    }
+    
+    @include media("retina2x") {
+        
+    }
+}

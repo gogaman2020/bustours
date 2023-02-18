@@ -1,0 +1,27 @@
+@import "/styles/mixins";
+
+.root {
+    @include font(subtitle1);
+    @extend %button-base;
+
+    &--theme-white {
+        @extend %button-white-theme;
+        
+        &.root--hover:hover {
+            @extend %button-black-theme;
+        }
+    }
+
+    &--theme-black {
+        @extend %button-black-theme;
+
+        &.root--hover:hover {
+            @extend %button-white-theme;
+        }
+    }
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}

@@ -1,0 +1,16 @@
+.select {
+	position: relative;
+	border-bottom: 0;
+}
+
+.select-label {
+	&__text {
+		display: inline-block;
+		font-size: 16px;
+		color: #202020;
+		margin-bottom: 3px;
+	}
+	&__tooltip {
+		margin-left: 4px;
+	}
+}

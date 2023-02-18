@@ -1,0 +1,91 @@
+@import "@/styles/mixins";
+
+$error_color: red;
+
+.root {
+
+    //margin:0px 20px 0px 0px;
+
+    &.error {
+        .control {
+            border: 1px solid $error_color !important;
+        }
+
+        // :global {
+        //     select, .numeric-input.no-control, .claendar2-container-bd1 {
+        //         border: 1px solid $error_color !important;
+        //         border-radius: 4px;
+        //     }          
+        // }
+    }
+
+    &.checkbox.error, &.noErrorBorder.error {
+        .control {
+            border: none !important;
+        }
+    }
+
+    .title {
+        @include font(subtitle2);
+        margin-bottom: 5px;
+        display: block;
+        height: auto;
+        max-height: 13px;
+        white-space: nowrap;
+
+        &--text-left {
+            text-align: left;
+        }
+    }
+
+    .error {
+        color: $error_color;
+        font-size: 14px;
+        margin-top: 4px;
+        max-width: 214px;
+    }    
+
+    .success {
+        color: green;
+        font-size: 14px;
+        margin-top: 4px;
+        max-width: 214px;
+    }      
+}
+
+
+.control {
+    @extend %control-layout;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+
+    &.noBack {
+        background: inherit;
+        padding: 0px;
+    }
+
+    &.dropdown {
+        padding: 0px;
+    }
+
+    &.autoHeight {
+        height: auto;
+    }
+}
+
+.root {
+    &.right {
+        .label {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: flex-start;
+            @include font(main);
+
+            & > span {
+                margin-left: 1em;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@import "/styles/global";
+@import "/styles/overrides";
+
+@include media("<=md-desktop") {
+	.logout-block {
+		font-size: 12px;
+
+		& img {
+			height: 1.2em;
+		}
+	}
+}
+
+@include media("<=md-tablet") {
+	.logout-block {
+		& .user-role {
+			justify-content: flex-start;
+		}
+	}
+}

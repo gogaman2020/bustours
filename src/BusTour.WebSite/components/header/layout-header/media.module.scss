@@ -1,0 +1,105 @@
+@import "/styles/global";
+@import "/styles/overrides";
+
+@include media(">md-tablet") {
+	.header-burger-menu {
+		display: flex;
+	}
+}
+
+@include media("<=md-desktop") {
+	div.header {
+		padding: 19px 26px 20px;
+		max-height: 75px;
+
+		&_logo a {
+			font-size: 24px;
+		}
+
+		&_item {
+			font-size: 12px;
+		}
+
+		&_right-menu {
+			& .booking-link {
+				margin-right: 20px;
+				
+				& > a {
+					padding: 4px 18px;
+				}
+			}
+		}
+	}
+}
+
+@include media("<=md-tablet") {
+	div.header {
+		align-items: stretch;
+    	column-gap: 0;
+    	display: grid;
+    	grid-template-columns: repeat(3, 1fr);
+
+		&_logo {
+			justify-self: center;
+			grid-column: 2 / 3;
+		}
+		
+		&_auth-control {
+			display: none;
+		}
+
+		&_menu {
+			position: absolute;
+
+			&-wrapper {
+				position: fixed;
+				top: 69px;
+				background-color: #000;
+				flex-direction: column;
+				width: auto;
+				padding: 17px 26px;
+				right: 0;
+				z-index: 2;
+			}
+		}
+
+		&_burger-menu {
+			display: none;
+
+			&-lang-switcher, &-auth-control {
+				display: block;
+			}
+
+			&-auth-control:empty {
+				padding: 0 !important;
+				margin-bottom: -12px;
+			}
+
+			&-icon {
+				grid-column: 3 / 4;
+				justify-self: end;
+				display: initial;
+			}
+		}
+
+		&_right-menu {
+			display: none;
+		}
+
+		&_item {
+			text-align: left;
+
+			&:not(:first-child):not(:last-child) {
+				padding: 12px 0px;
+			}
+			
+			&:first-child {
+				padding-bottom: 12px;
+			}
+
+			&:last-child {
+				padding-top: 12px;
+			}
+		}
+	}
+}

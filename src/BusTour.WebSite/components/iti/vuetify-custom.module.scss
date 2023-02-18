@@ -1,0 +1,91 @@
+@import "/styles/mixins.scss";
+
+.tabs {
+	width: fit-content;
+	margin: 0 auto;
+
+	[class*="v-slide-group__wrapper"] {
+		touch-action: auto;
+	}	
+
+	&--vertical {
+		width: auto;
+		
+		[class*="v-slide-group__content"] {
+			align-items: flex-start;
+
+			@include media("<=sm-tablet") {
+				align-items: center;
+			}
+
+			& > div[role="tab"] {
+				height: auto;
+				padding: 16px;
+
+				@include media("<=sm-tablet") {
+					&::before {
+						content: "";
+						align-self: center;
+						background-color: transparent;
+						opacity: 1;
+						width: 4px;
+						height: 4px;
+						border-radius: 50%;
+						font-size: 30px;
+						top: 50%;
+						background-color: #000;
+						transform: translateY(-50%);
+					}
+				}
+			}
+		}
+	}
+
+	@include media("<=phone") {
+		width: 100%;
+	}
+
+	&:not([class*="vertical"]) [class*="v-slide-group__content"] {
+		@include media("<=phone") {
+			justify-content: space-between;
+		}
+	}
+}
+
+.tab {
+	@include adaptive-prop("padding-left", 10, 45, "max-width", 576);
+	@include adaptive-prop("padding-right", 10, 45, "max-width", 576);
+	@include adaptive-prop("min-width", 0, 90, "max-width", 576);
+
+	padding: {
+		top: 0;
+		bottom: 0;
+	}
+
+	color: #000 !important;
+	font-weight: inherit;
+
+	&--active {
+		font-weight: 700;
+	}
+
+	& :global(.v-ripple__container) {
+		display: none;
+	}
+
+	&::before, &::after {
+		content: unset;
+	}
+}
+
+.tabs-content {
+	margin-top: 30px;
+
+	& :global(.v-window__container) {
+		transition: none;
+	}
+}
+
+[class*="v-slide-group__prev--disabled"] {
+	display: none !important;
+}

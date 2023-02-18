@@ -1,0 +1,33 @@
+@import "/styles/mixins.scss";
+
+.back-button {
+	@extend %button-base;
+	
+	min-width: 70px;
+
+	&--theme {
+		&-black {
+			@extend %button-black-theme;
+			fill: #fff;
+
+			&:hover {
+				@extend %button-white-theme;
+				fill: #000;
+			}
+		}
+
+		&-white {
+			@extend %button-white-theme;
+			fill: #000;;
+
+			&:hover {
+				@extend %button-black-theme;
+				fill: #fff;
+			}
+		}
+	}
+
+	&__svg {
+		height: 40px;
+	}
+}

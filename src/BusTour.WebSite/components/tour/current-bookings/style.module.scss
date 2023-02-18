@@ -1,0 +1,82 @@
+@import "@/styles/mixins";
+
+.page {
+
+    h1 {
+        margin-bottom: units(3);
+    }
+    
+
+    .filter {
+        .applyButton {
+            margin-top: units(3);
+        }
+
+        .row {
+            display: flex;
+            margin-top: units(3);
+
+            & > div:not(.multiselect) {
+                margin-right: units(2);
+                width: 214px;
+            }
+        }
+    }
+    .box{
+        margin-right: 25px;
+    }
+
+    .grid {
+        &__row-buttons-wrapper {
+            display: flex;
+            column-gap: 20px;
+        }
+    }
+
+    .firstColumn{
+        text-align: left;
+    }
+
+    .tours {
+        margin-top: units(4);
+
+        .grid {
+            margin-top: units(0);
+        }
+    }
+
+    .deleteButton {
+        margin-top: units(-1.5);
+        margin-bottom: units(0);
+    }
+
+    .block-cell-template {
+        height: 40px;
+        top: 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        &--red {
+            background-color: #F00C0C4D;
+        }
+    
+        &--green {
+            background-color: #C1E5B8;
+        }
+
+        &--yellow {
+            background-color: #e6b30b96;
+        }
+    
+        &--white {
+            background-color: #F5F5F5;
+        }
+
+        &--gray {
+            background-color: #55555538;
+        }
+    }
+    
+}

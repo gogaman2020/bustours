@@ -1,0 +1,79 @@
+@import "../../../Styles/variables";
+
+.button {
+	display: block;
+	max-width: 100%;
+	overflow: hidden;
+	vertical-align: middle;
+	border-radius: $br-8;
+	border-bottom-right-radius: $br-20;
+	transition: all .15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button {
+	font-size: 16px;
+	font-weight: 600;
+	text-align: center;
+	text-decoration: none !important;
+}
+
+//lg
+.button_lg {
+	padding: 16px 16px;
+}
+//mid
+.button_mid {
+	padding: 9px
+}
+//sm
+.button_sm {
+	padding: 5px
+}
+
+//turquoise
+.button_turquoise ,.button_turquoise.button_disabled:hover{
+	background: linear-gradient(0deg, #36C6D3, #36C6D3), rgba(0, 0, 0, 0.2);
+	color: #FFFFFF;
+}
+
+//blue
+.button_blue,.button_blue.button_disabled:hover {
+	background: linear-gradient(0deg, #3095DB, #3095DB), rgba(0, 0, 0, 0.2);
+	color: #FFFFFF;
+}
+
+//white
+.button_white,.button_white.button_disabled:hover {
+	background: linear-gradient(0deg, #FFFFFF, #FFFFFF), rgba(0, 0, 0, 0.2);
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.64);
+}
+
+//red
+.button_red, .button_red.button_disabled:hover {
+	background: linear-gradient(0deg, rgba(242, 9, 9, 0.78), rgba(242, 9, 9, 0.78)), rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.button_turquoise:hover {
+	background: linear-gradient(0deg, #26A4B0, #26A4B0), rgba(0, 0, 0, 0.2);
+}
+
+.button_blue:hover {
+	background: linear-gradient(0deg, #217EBD, #217EBD), rgba(0, 0, 0, 0.2);
+}
+
+.button_white:hover {
+	background: linear-gradient(0deg, #E1E5EC, #E1E5EC), rgba(0, 0, 0, 0.2);
+	color: rgba(0, 0, 0, 0.66);
+}
+
+.button_red:hover {
+	background: linear-gradient(0deg, rgba(223, 6, 6, 0.822), rgba(206, 3, 3, 0.78)), rgba(0, 0, 0, 0.2);
+}
+
+//disabled
+ .button_disabled /*, .button_disabled:focus*/ {
+	opacity: .5;
+	box-shadow: none;
+}

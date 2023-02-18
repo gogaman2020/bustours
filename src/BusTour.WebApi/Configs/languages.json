@@ -1,0 +1,377 @@
+{
+  "Languages": {
+    "Languages": {
+      "address.address": {
+        "en": "38-51 Bedford Way, Bloomsbury, London WC1H 0DG",
+        "es": "Dirección: 38-51 Bedford Way, Bloomsbury, Londres WC1H 0DG",
+        "fr": "38-51 Bedford Way, Bloomsbury, Londres WC1H 0DG",
+        "ru": "Лондон, Бедфорд-уэй, 38-51"
+      },
+      "address.howToGet": {
+        "en": "You can get to Tower Bridge by several types of public transport: by buses: № 15, 42, 78, 100, 343 (to the stop Tower Bridge or Tower Hill Tower Gateway Station); Metro: Circle and District lines (to Tower Hill station); by river boat: they stop at the St. Katharine Pier and Tower Pier , which are within walking distance to the bridge",
+        "es": "Realice un recorrido por Londres para ver lugares de interés antiguos y nuevos, como la Abadía de Westminster, la Torre de Londres y el Palacio de Buckingham. Contempla las asombrosas vistas desde el London Eye, e incluso hay un almuerzo en un pub. Patatas Fritas y guisantes blandos alguien?",
+        "fr": "Faites un tour de Londres pour voir des sites anciens et nouveaux, notamment l`abbaye de Westminster, la Tour de Londres et le palais de Buckingham. Admirez des vues étonnantes depuis le London Eye, et il y a même un déjeuner au pub. Chips et petits pois tout le monde?",
+        "ru": "Доехать до Тауэрского моста можно несколькими видами общественного транспорта: на автобусах: № 15, 42, 78, 100, 343 (до остановки «Tower Bridge» или «Tower Hill Tower Gateway Station»); на метро: линии Circle и District (до станции «Tower Hill»); на речной лодке: они останавливаются у пирсов «St. Katharine Pier» и «Tower Pier», которые находятся в нескольких минутах ходьбы до моста"
+      },
+      "allergy.gluten": {
+        "en": "Gluten",
+        "es": "Gluten",
+        "fr": "Gluten",
+        "ru": "Глютен"
+      },
+      "allergy.sugar": {
+        "en": "Sugar",
+        "es": "Azúcar",
+        "fr": "Sucre",
+        "ru": "Сахар"
+      },
+      "allergy.nuts": {
+        "en": "Nuts",
+        "es": "Nueces",
+        "fr": "Noix",
+        "ru": "Орехи"
+      },
+      "allergy.fish": {
+        "en": "Fish",
+        "es": "Pez",
+        "fr": "Poisson",
+        "ru": "Рыба"
+      },
+      "allergy.other": {
+        "en": "Other",
+        "es": "Lo otro",
+        "fr": "Autre chose",
+        "ru": "Другое"
+      },
+      "beverage.stillWater": {
+        "en": "Still water",
+        "es": "Agua no carbonatada",
+        "fr": "Eau plate",
+        "ru": "Негазированная вода"
+      },
+      "beverage.sparklingWater": {
+        "en": "Sparkling water",
+        "es": "Agua gaseosa",
+        "fr": "Eau gazeuse",
+        "ru": "Газированная вода"
+      },
+      "beverage.cocaCola": {
+        "en": "Coca-cola",
+        "es": "Coca-cola",
+        "fr": "Coca-cola",
+        "ru": "Coca-cola"
+      },
+      "beverage.greenTea": {
+        "en": "Green tea",
+        "es": "Té verde",
+        "fr": "Thé vert",
+        "ru": "Зелёный чай"
+      },
+      "beverage.blackTea": {
+        "en": "Black tea",
+        "es": "Té negro",
+        "fr": "Thé noir",
+        "ru": "Чёрный чай"
+      },
+      "beverage.milk": {
+        "en": "Milk",
+        "es": "Leche",
+        "fr": "Lait",
+        "ru": "Молоко"
+      },
+      "beverage.beer": {
+        "en": "Beer",
+        "es": "Cerveza",
+        "fr": "Bière",
+        "ru": "Пиво"
+      },
+      "beverage.cognac": {
+        "en": "Cognac",
+        "es": "Coñac",
+        "fr": "Cognac",
+        "ru": "Коньяк"
+      },
+      "beverage.prosecco": {
+        "en": "Prosecco",
+        "es": "Prosecco",
+        "fr": "Prosecco",
+        "ru": "Просекко"
+      },
+      "beverage.whitesWine": {
+        "en": "Whites wine",
+        "es": "Blanco vino",
+        "fr": "Blanc vin",
+        "ru": "Белое вино"
+      },
+      "beverage.redsWine": {
+        "en": "Reds wine",
+        "es": "Rojo vino",
+        "fr": "Rouge vin",
+        "ru": "Красное вино"
+      },
+      "beverageGroup.nonAlcoholicBeverage": {
+        "en": "Non-alcoholic beverages",
+        "es": "Refrescos",
+        "fr": "Soft-drink",
+        "ru": "Безалкогольные напитки"
+      },
+      "beverageGroup.beer": {
+        "en": "Beer",
+        "es": "Cerveza",
+        "fr": "Bière",
+        "ru": "Пиво"
+      },
+      "beverageGroup.sparklingWine": {
+        "en": "Sparkling wine",
+        "es": "Champán",
+        "fr": "Champagne",
+        "ru": "Шампанское"
+      },
+      "beverageGroup.wine": {
+        "en": "Wine",
+        "es": "Vino",
+        "fr": "Vin",
+        "ru": "Вино"
+      },
+      "bus.name": {
+        "en": "London BUS",
+        "es": "AUTOBÚS DE Londres",
+        "fr": "BUS DE Londres",
+        "ru": "Лондонский автобус"
+      },
+      "certificateState.notUsed": {
+        "en": "Not used",
+        "es": "No utilizado",
+        "fr": "Non utilisé",
+        "ru": "Не использован"
+      },
+      "certificateState.used": {
+        "en": "Used",
+        "es": "Usado",
+        "fr": "Exploité",
+        "ru": "Использован"
+      },
+      "city.london": {
+        "en": "London",
+        "es": "Londres",
+        "fr": "Londres",
+        "ru": "Лондон"
+      },
+      "country.england": {
+        "en": "England",
+        "es": "Inglaterra",
+        "fr": "Angleterre",
+        "ru": "Англия"
+      },
+      "menu.meat": {
+        "en": "Meat",
+        "es": "Carne",
+        "fr": "De la viandee",
+        "ru": "Мясное"
+      },
+      "menu.fish": {
+        "en": "Fish",
+        "es": "De pescado",
+        "fr": "De poisson",
+        "ru": "Рыбное"
+      },
+      "menu.vegetarian": {
+        "en": "Vegetarian",
+        "es": "De hortalizas",
+        "fr": "De légumes",
+        "ru": "Овощное"
+      },
+      "menu.chinese": {
+        "en": "Chinese",
+        "es": "Chino",
+        "fr": "Chinois",
+        "ru": "Китайское"
+      },
+      "menu.caviar": {
+        "en": "Black caviar",
+        "es": "Caviar negro",
+        "fr": "Caviar",
+        "ru": "Чёрная икра"
+      },
+      "menu.lobster": {
+        "en": "Lobster",
+        "es": "Langosta",
+        "fr": "Homard",
+        "ru": "Лобстер"
+      },
+      "menu.oysters": {
+        "en": "Oysters",
+        "es": "Ostras",
+        "fr": "Huîtres",
+        "ru": "Устрицы"
+      },
+      "menu.eclair": {
+        "en": "Éclair",
+        "es": "Canuto",
+        "fr": "Eclair",
+        "ru": "Эклер"
+      },
+      "menu.macaron": {
+        "en": "Macaron",
+        "es": "Macaroon",
+        "fr": "Macaron",
+        "ru": "Макарон"
+      },
+      "menuType.standard": {
+        "en": "Standard",
+        "es": "Estándar",
+        "fr": "Typique",
+        "ru": "Типовое"
+      },
+      "menuType.special": {
+        "en": "Special",
+        "es": "Caso especial",
+        "fr": "Cas à part",
+        "ru": "Особые случаи"
+      },
+      "menuType.desserts": {
+        "en": "Desserts",
+        "es": "Postres",
+        "fr": "Desserts",
+        "ru": "Десерты"
+      },
+      "route.name": {
+        "en": "Central London sightseeing tour",
+        "es": "Recorrido por el centro de Londres",
+        "fr": "Visite guidée du centre de Londres",
+        "ru": "Обзорная экскурсия по центральному Лондону"
+      },
+      "route.description": {
+        "en": "Take a London tour to see sights both old and new including Westminster Abbey, the Tower of London and Buckingham Palace. See astonishing views from the London Eye, and there`s even a pub lunch thrown in. Chips and mushy peas anyone?",
+        "es": "Realice un recorrido por Londres para ver lugares de interés antiguos y nuevos, como la Abadía de Westminster, la Torre de Londres y el Palacio de Buckingham. Contempla las asombrosas vistas desde el London Eye, e incluso hay un almuerzo en un pub. Patatas Fritas y guisantes blandos alguien?",
+        "fr": "Faites un tour de Londres pour voir des sites anciens et nouveaux, notamment l`abbaye de Westminster, la Tour de Londres et le palais de Buckingham. Admirez des vues étonnantes depuis le London Eye, et il y a même un déjeuner au pub. Chips et petits pois tout le monde?",
+        "ru": "Совершите экскурсию по Лондону, чтобы увидеть старые и новые достопримечательности, включая Вестминстерское аббатство, Лондонский Тауэр и Букингемский дворец. Полюбуйтесь потрясающими видами из Лондонского Глаза и даже обедом в пабе. Чипсы и пюре?"
+      },
+      "surprise.sparklingWine": {
+        "en": "Sparkling wine",
+        "es": "Champán",
+        "fr": "Champagne",
+        "ru": "Шампанское"
+      },
+      "surprise.wine": {
+        "en": "Wine",
+        "es": "Vino",
+        "fr": "Vin",
+        "ru": "Вино"
+      },
+      "surprise.cake": {
+        "en": "Cake",
+        "es": "Torta",
+        "fr": "Gâteau",
+        "ru": "Торт"
+      },
+      "surprise.cakeCandle": {
+        "en": "Cake + candle",
+        "es": "Torta + vela",
+        "fr": "Gâteau + chandelle",
+        "ru": "Торт + свечка"
+      },
+      "tableCategory.regular": {
+        "en": "Regular",
+        "es": "Normal",
+        "fr": "Vêtement de ville",
+        "ru": "Обычная"
+      },
+      "tableCategory.VIP": {
+        "en": "VIP",
+        "es": "VIP",
+        "fr": "VIP",
+        "ru": "VIP"
+      },
+      "tableCategory.wheelchair": {
+        "en": "Wheelchair",
+        "es": "Silla de Ruedas",
+        "fr": "Fauteuil",
+        "ru": "Для инвалидов с коляской"
+      },
+      "unit.ml": {
+        "en": "ml",
+        "es": "ml",
+        "fr": "ml",
+        "ru": "мл"
+      },
+      "unit.glass": {
+        "en": "glass",
+        "es": "copa",
+        "fr": "verre",
+        "ru": "бокал"
+      },
+      "unit.bottle": {
+        "en": "bottle",
+        "es": "botella",
+        "fr": "bouteille",
+        "ru": "бутылка"
+      },
+      "unit.g": {
+        "en": "g",
+        "es": "g",
+        "fr": "g",
+        "ru": "г"
+      },
+      "unit.item": {
+        "en": "item",
+        "es": "pieza",
+        "fr": "pièce",
+        "ru": "штука"
+      },
+      "wine.reds": {
+        "en": "Reds",
+        "es": "Rojo",
+        "fr": "Rouge",
+        "ru": "Красное"
+      },
+      "wine.whites": {
+        "en": "Whites",
+        "es": "Blanco",
+        "fr": "Blanc",
+        "ru": "Белое"
+      }
+
+
+
+      //"en": {
+      //  "bookingSummaryHeader": "Booking summary",
+      //  "cityHeader": "City",
+      //  "dateHeader": "Date",
+      //  "itineraryHeader": "Itinerary",
+      //  "departureTimeHeader": "Departure time",
+      //  "guestsHeader": "Guests",
+      //  "tableHeader": "Table",
+      //  "seatsHeader": "Seats",
+      //  "tourPriceHeader": "Tour price",
+      //  "extrasHeader": "Extras",
+      //  "promoCodeHeader": "Promo code",
+      //  "certificateHeader": "Gift certificate",
+      //  "totalHeader": "Total",
+      //  "vatHeader": "Including VAT",
+      //  "yes": "Yes",
+      //  "no": "No"
+      //},
+      //"ru": {
+      //  "bookingSummaryHeader": "Информация о бронировании",
+      //  "cityHeader": "Город",
+      //  "dateHeader": "Дата",
+      //  "itineraryHeader": "Маршрут",
+      //  "departureTimeHeader": "Время отправления",
+      //  "guestsHeader": "Количество гостей",
+      //  "tableHeader": "Стол",
+      //  "seatsHeader": "Места",
+      //  "tourPriceHeader": "Стоимость тура",
+      //  "extrasHeader": "Дополнительно",
+      //  "promoCodeHeader": "Промокод",
+      //  "certificateHeader": "Подарочный сертификат",
+      //  "totalHeader": "Итого",
+      //  "vatHeader": "Включая НДС",
+      //  "yes": "Да",
+      //  "no": "Нет"
+      //}
+    }
+  }
+
+
+  }

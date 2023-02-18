@@ -1,0 +1,75 @@
+@import "/styles/mixins.scss";
+
+$breakpoints: map-merge($breakpoints, ("custom": 862px));
+input {
+    outline: none;
+}
+.form {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 20px;
+	column-gap: 35px;
+	align-content: flex-start;
+
+	.greedy {
+		flex: 1 1 100%;
+	}
+
+	&__guests-control {
+		@include media(">custom") {
+			width: 95px;
+		}
+	}
+
+	&__table-control {
+		width: 272px;
+	}
+
+	&__route-control {
+		width: 179px + 179px + 45px;
+		@include media("<=custom") {
+			width: 100%;
+		}					
+	}	
+
+	&__calendar {
+		width: 220px;		
+	}	
+
+	&__time-control {
+		width: 149px;	
+	}	
+
+	&__text-control {
+		width: 189px;
+		&--narrow {
+			width: 179px;
+		}		
+	}	
+
+	&__calendar {
+		@include media("<=custom") {
+			& input, & [class*="claendar2"] { 
+				width: 100%;
+			}
+		}
+	}
+
+	&__checkbox-control {
+		width: 100%;
+		font-size: rem(18);		
+	}
+
+	&__certificate, &__promo-code {
+		width: 179px;
+	}
+
+	@include media("<=custom") {
+		& > div {
+			width: 100%;
+		}
+		& > &__calendar, & > &__time-control, & > &__text-control {
+			width: 220px;			
+		}		
+	}
+}

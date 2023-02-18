@@ -1,0 +1,31 @@
+@import "@/styles/mixins";
+
+.bottomControl {
+    width: units(40);
+    margin-right: units(2);
+}
+
+
+.bottomControlThird {
+    width: units(26);
+    margin-right: units(2);
+}   
+
+.conflicts {
+    flex-direction: column;
+    margin-top: units(4);
+
+    h2 {
+        margin-bottom: units(2);
+    }
+
+    .buttons {
+        display: flex;
+        
+        button {
+            width: units(30);
+            margin-top: units(2);
+            margin-right: units(2);
+        }
+    }
+}
